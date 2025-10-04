@@ -13,10 +13,9 @@
             line-height: 1.6;
         }
         .page {
-            /* 印刷時にページを分ける設定 */
             page-break-after: always;
-            padding: 20mm; /* 印刷時の余白を考慮 */
-            min-height: 270mm; /* A4サイズを意識した最小高さ */
+            padding: 20mm;
+            min-height: 270mm;
             box-sizing: border-box;
             position: relative;
         }
@@ -49,12 +48,20 @@
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
+            vertical-align: top;
         }
         th {
             background-color: #e0f2f1;
             color: #004d40;
             font-weight: bold;
             width: 20%;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .notes {
             background-color: #fffde7;
@@ -71,23 +78,6 @@
             margin-right: 10px;
             transform: scale(1.5);
         }
-        .map-container {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-        }
-        .map-container iframe {
-            width: 100%;
-            height: 300px;
-            border: 0;
-        }
-        .flight-info {
-            background-color: #f0f4c3;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        /* フッターのページ番号（印刷時のみ表示を想定） */
         .page::after {
             content: "ページ " counter(page);
             position: absolute;
@@ -98,163 +88,193 @@
         }
         .inferred-note {
             font-style: italic;
-            color: #9c27b0; /* 紫色で推定内容を強調 */
+            color: #9c27b0;
             font-size: 0.9em;
+            display: block;
+            margin-top: 4px;
         }
-        @media print {
-            .map-container {
-                display: none; /* 印刷時には地図を非表示に */
-            }
+        .phrase-list {
+            column-count: 2;
+            column-gap: 30px;
+        }
+        .phrase-item {
+            margin-bottom: 10px;
+            break-inside: avoid-column;
+        }
+        .finance-box {
+            border: 2px solid #00796b;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #e0f2f1;
+            border-radius: 5px;
+        }
+        .icon {
+            margin-right: 5px;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
 
 <div class="page">
-    <h1>京都文教中学校 2025年度 海外研修旅行 旅程表</h1>
+    <h1><a href="https://school.hs-kbu.jp/junior-jhs/" target="_blank" rel="noopener noreferrer">京都文教中学校</a> 2025年度 海外研修旅行 旅程表</h1>
     <h2>🇦🇺 オーストラリア方面 6日間 (ホームステイ含む)</h2>
     <p><strong>旅行期間:</strong> 2025年10月17日(金) ～ 2025年10月22日(水)</p>
     <p><strong>旅行方面:</strong> オーストラリア 方面 (ブリスベン、ゴールドコースト近郊)</p>
     <p><strong>参加人員:</strong> 生徒46名様・先生4名様・看護師1名 (添乗員1名同行)</p>
-    <p><strong>航空会社:</strong> JQ (ジェットスター航空)</p>
+    <p><strong>航空会社:</strong> JQ (<a href="https://www.jetstar.com/jp/ja/home" target="_blank" rel="noopener noreferrer">ジェットスター航空</a>)</p>
 
     <div class="notes">
         <h3>【重要事項】</h3>
         <ul>
             <li>航空会社のフライトスケジュールは変更となる場合がございます。</li>
             <li>ご旅程は運輸機関のダイヤ改正及び各地の道路状況により多少時間が変更になる場合がございます。</li>
-            <li><strong>LCC（格安航空会社）</strong>であるジェットスター航空を利用します（JQ24便、JQ23便）。 <span class="inferred-note">(JAL/ANA以外の格安航空会社であるJQを利用することから追記)</span></li>
+            <li><strong>LCC（格安航空会社）</strong>であるジェットスター航空を利用します。
+                <span class="inferred-note">💡【追記アドバイス】会社の規定ではLCC利用不可とのことですが、本研修旅行では利用する点にご留意ください。</span>
+            </li>
             <li><strong>機内での飲み物</strong>は有料なため、必要な分は買っておくこと。</li>
         </ul>
     </div>
 
     <h2>✈️ 1日目: 10月17日(金) - 関西空港へ、ブリスベンへ (機内泊)</h2>
-    <div class="map-container">
-        <p>🗺️ <strong>本日の主な移動：</strong> 京都駅 → 関西国際空港 <span class="inferred-note">(地図は主要移動地の可視化のために追加)</span></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d104990.009361732!2d135.53986873966574!3d34.70889984953935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x346505ab3845b591%3A0xc6199f18706d87fa!2z5Lqs6aeT54y_!3m2!1d34.985923!2d135.758784!4m5!1s0x355b93d4084f7b6b%3A0x62804f326a27e02e!2z6Kq95bGx5Yy65aSn6KqA6KqB!3m2!1d34.43485!2d135.244304!5e0!3m2!1sja!2sjp!4v1699000000000!5m2!1sja!2sjp"></iframe>
-    </div>
     <table>
         <tr>
             <th>時刻</th>
             <th>行先/場所</th>
             <th>内容</th>
+            <th>交通機関</th>
             <th>食事</th>
         </tr>
         <tr>
             <td>16:10</td>
             <td>京都駅劇場前広場</td>
-            <td><strong>集合</strong> (パスポート持参確認)。特急はるか45号にて関西空港へ。</td>
+            <td><strong>集合</strong> (パスポート持参確認)。</td>
+            <td></td>
             <td rowspan="4">夕: 機内</td>
         </tr>
         <tr>
             <td>17:00発</td>
-            <td>京都駅</td>
-            <td>JR特急はるか45号。</td>
+            <td>京都駅 → 関西国際空港</td>
+            <td>JR特急はるか45号にて関西空港へ。</td>
+            <td><span class="icon">🚅</span> <a href="https://www.westjr.co.jp/travel-information/jp/tickets-passes/oneway/haruka/" target="_blank" rel="noopener noreferrer">JR特急はるか</a></td>
         </tr>
         <tr>
             <td>18:26着</td>
-            <td>関西国際空港</td>
+            <td><a href="https://www.kansai-airport.or.jp/" target="_blank" rel="noopener noreferrer">関西国際空港 (KIX)</a></td>
             <td>チェックイン、搭乗手続き、出国手続き。</td>
+            <td></td>
         </tr>
         <tr>
             <td>21:45発</td>
-            <td>関西国際空港 (JQ24便)</td>
+            <td>関西国際空港 → ブリスベン</td>
             <td>空路、ブリスベンへ (機内泊)。<strong>機内食は夕食・朝軽食の2回</strong>出ます。</td>
+            <td><span class="icon">✈️</span> <a href="https://www.jetstar.com/jp/ja/home" target="_blank" rel="noopener noreferrer">JQ24便</a></td>
         </tr>
     </table>
-    <h3>✅ 1日目に必要なもの（特に重要なもの） <span class="inferred-note">(持ち物/備考欄から整理して追加)</span></h3>
+    <h3>✅ 1日目に必要なもの（特に重要なもの）</h3>
     <ul>
         <li><strong>パスポート</strong></li>
         <li><strong>搭乗券</strong> (チェックイン後に受け取る)</li>
         <li><strong>手荷物</strong>（貴重品・カメラ・電子機器類）</li>
-        <li><strong>機内で必要なもの</strong>（酔い止め薬、有料ドリンク、軽食）</li>
+        <li><strong>機内で必要なもの</strong>（酔い止め薬、有料ドリンク用の現金、軽食）</li>
         <li><strong>服装</strong>: 私服</li>
     </ul>
 </div>
 
 <div class="page">
     <h2>🐨 2日目: 10月18日(土) - ブリスベン到着、市内観光、ホストファミリーと対面</h2>
-    <div class="map-container">
-        <p>🗺️ <strong>本日の主な移動：</strong> ブリスベン空港 → マウントクーサ → ローンパインコアラ保護区 → 現地校 (Pimpama/Pacific Pines) <span class="inferred-note">(地図は主要移動地の可視化のために追加)</span></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d17730.29292150172!2d152.93297771694378!3d-27.502951151664184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x6b915a7ac27c2111%3A0xc47e3a35a50787e9!2sBrisbane%20Airport!3m2!1d-27.3879946!2d153.1326402!4m5!1s0x6b9149021a8d070b%3A0x8683e9114757530!2sLone%20Pine%20Koala%20Sanctuary!3m2!1d-27.5061619!2d152.9841673!5e0!3m2!1sja!2sjp!4v1699000000000!5m2!1sja!2sjp"></iframe>
-    </div>
     <table>
         <tr>
             <th>時刻</th>
             <th>行先/場所</th>
             <th>内容</th>
+            <th>交通機関</th>
             <th>食事</th>
         </tr>
         <tr>
             <td>07:25着</td>
-            <td>ブリスベン空港</td>
+            <td><a href="https://www.bne.com.au/" target="_blank" rel="noopener noreferrer">ブリスベン空港 (BNE)</a></td>
             <td>入国審査、荷物ピックアップ、税関申告。ガイドと合流。</td>
+            <td></td>
             <td>朝: 機内</td>
         </tr>
         <tr>
             <td>08:40発</td>
-            <td>ブリスベン空港</td>
+            <td>ブリスベン市内へ</td>
             <td>専用バスにてブリスベン市内へ。<strong>ミネラルウォーター配布あり</strong>。</td>
+            <td><span class="icon">🚌</span> 専用バス</td>
             <td></td>
         </tr>
         <tr>
             <td>09:10着</td>
-            <td>マウントクーサ</td>
+            <td><a href="https://www.brisbane.qld.gov.au/things-to-see-and-do/council-venues-and-precincts/mt-coot-tha-precinct" target="_blank" rel="noopener noreferrer">マウントクーサ</a></td>
             <td>クラス写真・学年写真撮影後、自由散策。</td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <td>09:40着</td>
-            <td>ローンパインコアラ保護区</td>
+            <td><a href="https://lonepinekoalasanctuary.com/" target="_blank" rel="noopener noreferrer">ローンパインコアラ保護区</a></td>
             <td>クラス写真・学年写真撮影後、園内自由行動。</td>
+            <td></td>
             <td rowspan="3">昼: レストラン<br>夕: 各家庭</td>
         </tr>
         <tr>
             <td>11:45着</td>
             <td>レストラン</td>
-            <td>昼食: SOUTHBANK BEER GARDENNにて（ビーフバーガー等）。</td>
+            <td>昼食: <a href="https://www.southbankbeergarden.com.au/" target="_blank" rel="noopener noreferrer">SOUTHBANK BEER GARDEN</a>にて（ビーフバーガー等）。</td>
+            <td></td>
         </tr>
         <tr>
-            <td>14:00着</td>
-            <td>Pimpama State School / Pacific Pines State School</td>
+            <td>14:00/15:40着</td>
+            <td><a href="https://pimpamass.eq.edu.au/" target="_blank" rel="noopener noreferrer">Pimpama State School</a> / <a href="https://pacificpinesss.eq.edu.au/" target="_blank" rel="noopener noreferrer">Pacific Pines State School</a></td>
             <td>現地校へ移動。ホストファミリーと対面、各家庭へ。</td>
+            <td><span class="icon">🚌</span> 専用バス</td>
         </tr>
     </table>
-    <h3>✅ 2日目に必要なもの（特に重要なもの） <span class="inferred-note">(持ち物/備考欄から整理して追加)</span></h3>
+    <h3>✅ 2日目に必要なもの（特に重要なもの）</h3>
     <ul>
         <li><strong>パスポート</strong> (入国審査・税関申告のため)</li>
         <li><strong>酔い止め薬</strong> (バス移動前)</li>
         <li><strong>移動しやすい服装</strong> (私服、17日と同じ服)</li>
-        <li><strong>ホストファミリーへのお土産</strong>（あれば） <span class="inferred-note">(ホームステイ初日のため推定)</span></li>
-        <li><strong>自己紹介で使える簡単な英語フレーズ</strong> <span class="inferred-note">(A2レベルでのホームステイのため推定)</span></li>
+        <li><strong>ホストファミリーへのお土産</strong>（あれば）
+            <span class="inferred-note">💡【追記アドバイス】ホームステイ初日です。感謝の気持ちを伝える小さなプレゼントがあると喜ばれるでしょう。</span>
+        </li>
+        <li><strong>自己紹介で使える簡単な英語フレーズ</strong>
+            <span class="inferred-note">💡【追記アドバイス】A2レベルとのことなので、趣味や好きなことなど、簡単な自己紹介を準備しておくと会話が弾みます。</span>
+        </li>
     </ul>
 </div>
 
 <div class="page">
     <h2>🏡 3日目: 10月19日(日) - ホームステイ (終日)</h2>
-    <div class="map-container">
-        <p>🗺️ <strong>本日の主な滞在エリア：</strong> ゴールドコースト近郊（ホストファミリー宅） <span class="inferred-note">(地図は滞在エリアの可視化のために追加)</span></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3527.2797607590815!2d153.30806487508496!3d-28.00392337424619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x6b911a37c87c14a9%3A0xc7f60b865611488c!2sPacific%20Pines%20State%20School!3m2!1d-27.9701021!2d153.3283733!4m5!1s0x6b91129b19e2c659%3A0x6b801a2c3a51f782!2sPimpama%20State%20School!3m2!1d-27.8080678!2d153.3283597!5e0!3m2!1sja!2sjp!4v1699000000000!5m2!1sja!2sjp"></iframe>
-    </div>
     <table>
         <tr>
             <th>時刻</th>
             <th>行先/場所</th>
             <th>内容</th>
+            <th>交通機関</th>
             <th>食事</th>
         </tr>
         <tr>
             <td>終日</td>
             <td>ゴールドコースト近郊</td>
             <td><strong>終日、ホストファミリーとお過ごしいただきます</strong> (ホームステイ)。</td>
+            <td>ホスト送迎</td>
             <td>朝: 各家庭<br>昼: 各家庭<br>夕: 各家庭</td>
         </tr>
     </table>
-    <h3>✅ 3日目に必要なもの（特に重要なもの） <span class="inferred-note">(持ち物/備考欄から整理して追加)</span></h3>
+    <h3>✅ 3日目に必要なもの（特に重要なもの）</h3>
     <ul>
-        <li><strong>ホストファミリーとの会話を楽しむ意欲</strong> (英語学習中であることを伝え、積極的に話す) <span class="inferred-note">(終日ホームステイのため推定)</span></li>
-        <li><strong>筆記用具、メモ帳</strong> (わからない単語をメモするため) <span class="inferred-note">(英会話学習中のため推定)</span></li>
-        <li><strong>日本の文化紹介グッズ</strong>（折り紙など、あれば） <span class="inferred-note">(文化交流の機会のため推定)</span></li>
+        <li><strong>ホストファミリーとの会話を楽しむ意欲</strong>
+            <span class="inferred-note">💡【追記アドバイス】英語学習中であることを伝え、積極的に話してみましょう。間違いを恐れないことが大切です。</span>
+        </li>
+        <li><strong>筆記用具、メモ帳</strong>
+            <span class="inferred-note">💡【追記アドバイス】わからない単語や表現をメモしておくと、後で復習でき、学習効果が高まります。</span>
+        </li>
+        <li><strong>日本の文化紹介グッズ</strong>（折り紙など、あれば）
+            <span class="inferred-note">💡【追記アドバイス】簡単な日本文化を紹介できるものがあると、コミュニケーションのきっかけになります。</span>
+        </li>
         <li><strong>私服</strong> (終日)</li>
     </ul>
 </div>
@@ -266,32 +286,38 @@
             <th>時刻</th>
             <th>行先/場所</th>
             <th>内容</th>
+            <th>交通機関</th>
             <th>食事</th>
         </tr>
         <tr>
             <td>08:00～08:30</td>
             <td>現地校着</td>
             <td>各ホームステイ先から登校 (ホストファミリーの送迎)。</td>
+            <td>ホスト送迎</td>
             <td>朝: 各家庭</td>
         </tr>
         <tr>
             <td>終日</td>
             <td>Pimpama State School / Pacific Pines State School</td>
             <td>ウェルカムセレモニー、<strong>バディとの対面・交流</strong>、<strong>文教生だけの英語授業</strong>、授業参加やスポーツ交流。</td>
+            <td></td>
             <td>昼: バックランチ<br>夕: 各家庭</td>
         </tr>
         <tr>
             <td>15:00</td>
             <td>現地校発</td>
             <td>ホストファミリーの送迎で帰宅。</td>
+            <td>ホスト送迎</td>
             <td></td>
         </tr>
     </table>
-    <h3>✅ 4日目に必要なもの（特に重要なもの） <span class="inferred-note">(持ち物/備考欄から整理して追加)</span></h3>
+    <h3>✅ 4日目に必要なもの（特に重要なもの）</h3>
     <ul>
         <li><strong>制服</strong> (終日)</li>
         <li><strong>貴重品</strong>（パスポート・スマホ・カメラ等）は<strong>スーツケースに入れて鍵をかけておく</strong>。</li>
-        <li><strong>バディとの交流のための話題</strong>（筆記用具、辞書アプリなど） <span class="inferred-note">(現地校交流のため推定)</span></li>
+        <li><strong>バディとの交流のための話題</strong>
+            <span class="inferred-note">💡【追記アドバイス】日本の学校生活やアニメ、好きな音楽など、写真やスマホアプリを見せながら話せる準備をしておくと良いでしょう。</span>
+        </li>
         <li><strong>バックランチ</strong>（ホストファミリーが用意）をなくさないように注意。</li>
     </ul>
 </div>
@@ -303,31 +329,37 @@
             <th>時刻</th>
             <th>行先/場所</th>
             <th>内容</th>
+            <th>交通機関</th>
             <th>食事</th>
         </tr>
         <tr>
             <td>08:00～08:30</td>
             <td>現地校着</td>
             <td>各ホームステイ先から登校 (ホストファミリーの送迎)。</td>
+            <td>ホスト送迎</td>
             <td>朝: 各家庭</td>
         </tr>
         <tr>
             <td>終日</td>
             <td>Pimpama State School / Pacific Pines State School</td>
             <td><strong>文教生による日本文化の紹介・交流</strong>、現地校との交流（バディの授業参加、スポーツ交流など）、<strong>フェアウェルセレモニー</strong>。</td>
+            <td></td>
             <td>昼: バックランチ<br>夕: 各家庭</td>
         </tr>
         <tr>
             <td>15:00</td>
             <td>現地校発</td>
             <td>ホストファミリーの送迎で帰宅。<strong>帰国の準備をする</strong>。</td>
+            <td>ホスト送迎</td>
             <td></td>
         </tr>
     </table>
-    <h3>✅ 5日目に必要なもの（特に重要なもの） <span class="inferred-note">(持ち物/備考欄から整理して追加)</span></h3>
+    <h3>✅ 5日目に必要なもの（特に重要なもの）</h3>
     <ul>
         <li><strong>制服か体操服</strong> (20日に指示された方)</li>
-        <li><strong>日本文化紹介のための準備物</strong> <span class="inferred-note">(文化紹介プログラムのため推定)</span></li>
+        <li><strong>日本文化紹介のための準備物</strong>
+            <span class="inferred-note">💡【追記アドバイス】プレゼンテーションの練習をしておきましょう。</span>
+        </li>
         <li><strong>スマホ</strong> (フェアウェルセレモニーの時のみ写真撮影可)</li>
         <li><strong>帰国準備</strong>: <strong>スーツケース</strong>（20kg以内×1個）と<strong>手荷物</strong>（パスポート、貴重品、液体物等）を分ける。</li>
     </ul>
@@ -335,107 +367,212 @@
 
 <div class="page">
     <h2>🛬 6日目: 10月22日(水) - ブリスベン発、帰国</h2>
-    <div class="map-container">
-        <p>🗺️ <strong>本日の主な移動：</strong> 現地校 → ブリスベン空港 → 関西国際空港 → 京都駅 <span class="inferred-note">(地図は主要移動地の可視化のために追加)</span></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d105206.88390145214!2d135.293406248386!3d34.61521785507119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x6b915a7ac27c2111%3A0xc47e3a35a50787e9!2sBrisbane%20Airport!3m2!1d-27.3879946!2d153.1326402!4m5!1s0x355b93d4084f7b6b%3A0x62804f326a27e02e!2z6Kq95bGx5Yy65aSn6KqA6KqB!3m2!1d34.43485!2d135.244304!5e0!3m2!1sja!2sjp!4v1699000000000!5m2!1sja!2sjp"></iframe>
-    </div>
     <table>
         <tr>
             <th>時刻</th>
             <th>行先/場所</th>
             <th>内容</th>
+            <th>交通機関</th>
             <th>食事</th>
         </tr>
         <tr>
             <td>07:00 / 07:40発</td>
             <td>各現地校発</td>
             <td>ホストファミリーの送迎で学校に集合。バスにて空港へ。</td>
+            <td><span class="icon">🚌</span> 専用バス</td>
             <td>朝: 各家庭</td>
         </tr>
         <tr>
             <td>08:40着</td>
-            <td>ブリスベン空港</td>
+            <td><a href="https://www.bne.com.au/" target="_blank" rel="noopener noreferrer">ブリスベン空港 (BNE)</a></td>
             <td>チェックイン、保安検査、出国審査。免税店あり、軽食・飲物購入可。</td>
+            <td></td>
             <td rowspan="4">昼: 機内<br>夕: 機内</td>
         </tr>
         <tr>
             <td>11:40発</td>
-            <td>ブリスベン空港 (JQ23便)</td>
+            <td>ブリスベン空港 → 関西空港</td>
             <td>空路、関西空港へ。<strong>機内食は昼食・軽食の2回</strong>。</td>
+            <td><span class="icon">✈️</span> <a href="https://www.jetstar.com/jp/ja/home" target="_blank" rel="noopener noreferrer">JQ23便</a></td>
         </tr>
         <tr>
             <td>19:40着</td>
-            <td>関西国際空港</td>
+            <td><a href="https://www.kansai-airport.or.jp/" target="_blank" rel="noopener noreferrer">関西国際空港 (KIX)</a></td>
             <td>入国審査、荷物受け取り、税関申告。</td>
+            <td></td>
         </tr>
         <tr>
             <td>20:40発</td>
-            <td>関西国際空港</td>
-            <td>貸切バスにて京都駅へ (バス会社: 関西中央交通)。</td>
+            <td>関西国際空港 → 京都駅</td>
+            <td>貸切バスにて京都駅へ。</td>
+            <td><span class="icon">🚌</span> 貸切バス</td>
         </tr>
         <tr>
             <td>22:10着</td>
             <td>京都駅八条口 (アバンティ前バス停)</td>
             <td>到着後、解散。<strong>希望者はシャトルタクシーにてご自宅へ</strong> (別途費用要)。</td>
             <td></td>
+            <td></td>
         </tr>
     </table>
-    <h3>✅ 6日目に必要なもの（特に重要なもの） <span class="inferred-note">(持ち物/備考欄から整理して追加)</span></h3>
+    <h3>✅ 6日目に必要なもの（特に重要なもの）</h3>
     <ul>
         <li><strong>パスポート</strong>・<strong>搭乗券</strong> (最後まで携帯)</li>
         <li><strong>携行品・別送品申告書</strong> (機内で記入を済ませておく)</li>
+        <li><strong>帰国時の<a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong> (日本)
+            <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加しました。事前に登録を済ませ、QRコードをスクリーンショットで保存しておくとスムーズです。</span>
+        </li>
         <li><strong>酔い止め薬</strong> (搭乗前に飲んでおく)</li>
         <li><strong>私服</strong></li>
     </ul>
 </div>
 
 <div class="page">
-    <h2>✅ 最終出発前チェックリスト <span class="inferred-note">(PDFの持ち物・備考欄の情報を統合・整理して追加)</span></h2>
+    <h1>📝 研修旅行で役立つ英会話50選 & 決済方法</h1>
+    <p>ホストファミリーやバディとの交流に役立つ、簡単な日常会話フレーズ集です。</p>
+
+    <div class="finance-box">
+        <h2>💳 決済方法の使い分けアドバイス</h2>
+        <p>現金と<a href="https://www.revolut.com/ja-JP/" target="_blank" rel="noopener noreferrer">Revolut</a>ジュニアカードを持参することを前提としています。</p>
+        <ul>
+            <li><strong>現金</strong>: ホストファミリーへのお礼、チップ（必要な場合）、自動販売機、小さな個人商店など、カードが使えない可能性のある場所で利用します。</li>
+            <li><strong>Revolutカード</strong>: 緊急時の予備費、お土産店、スーパーマーケットなど、カード決済対応の場所で利用します。多額の現金を一度に持ち歩かないように注意しましょう。</li>
+        </ul>
+        <span class="inferred-note">💡【追記アドバイス】両替は事前に済ませ、少額紙幣を多めに持たせておくと便利です。</span>
+    </div>
+
+    <h2>1. 挨拶・感謝 (Greetings & Thanks) [10フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">1. Hello. I'm <strong>Rio</strong>. (こんにちは。<strong>りお</strong>です。)</div>
+        <div class="phrase-item">2. Thank you for having me. (泊めてくれてありがとう。)</div>
+        <div class="phrase-item">3. It's great to be here. (ここに来られて嬉しいです。)</div>
+        <div class="phrase-item">4. Good morning/afternoon/night. (おはよう/こんにちは/おやすみなさい。)</div>
+        <div class="phrase-item">5. How are you today? (今日の調子はいかがですか？)</div>
+        <div class="phrase-item">6. I'm fine, thank you. (元気です、ありがとう。)</div>
+        <div class="phrase-item">7. The dinner was delicious! (夕食は美味しかったです！)</div>
+        <div class="phrase-item">8. I really enjoyed today. (今日は本当に楽しかったです。)</div>
+        <div class="phrase-item">9. See you tomorrow. (また明日ね。)</div>
+        <div class="phrase-item">10. I appreciate your help. (手伝ってくれて感謝します。)</div>
+    </div>
+    
+    <h2>2. 質問する (Asking Questions) [15フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">11. What is your name? (お名前は何ですか？)</div>
+        <div class="phrase-item">12. What is your favorite food? (好きな食べ物は何ですか？)</div>
+        <div class="phrase-item">13. Do you have any pets? (何かペットを飼っていますか？)</div>
+        <div class="phrase-item">14. Could you tell me about your family? (ご家族について教えてもらえますか？)</div>
+        <div class="phrase-item">15. What do you like to do in your free time? (暇な時は何をしますか？)</div>
+        <div class="phrase-item">16. What is your favorite Japanese food/place? (好きな日本の食べ物/場所は何ですか？)</div>
+        <div class="phrase-item">17. Where is the bathroom/toilet? (お風呂/トイレはどこですか？)</div>
+        <div class="phrase-item">18. What time should I wake up? (何時に起きるべきですか？)</div>
+        <div class="phrase-item">19. Can I help you with [chore]? (手伝いましょうか？)</div>
+        <div class="phrase-item">20. Can I use my phone now? (今、携帯を使ってもいいですか？)</div>
+        <div class="phrase-item">21. Is it okay if I sit here? (ここに座っても大丈夫ですか？)</div>
+        <div class="phrase-item">22. What is this called in English? (これは英語で何と言いますか？)</div>
+        <div class="phrase-item">23. Do you like living here? (ここに住むのは好きですか？)</div>
+        <div class="phrase-item">24. How long have you lived here? (ここにどのくらい住んでいますか？)</div>
+        <div class="phrase-item">25. Is it far from here? (ここから遠いですか？)</div>
+    </div>
+
+    <h2>3. 意思を伝える (Expressing Needs/Self) [15フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">26. I am a junior high school student from Kyoto. (京都から来た中学生です。)</div>
+        <div class="phrase-item">27. I like [Hobby] very much. (～がとても好きです。)</div>
+        <div class="phrase-item">28. I want to try [Activity]. (～を試してみたいです。)</div>
+        <div class="phrase-item">29. I need to [verb]... (～をする必要があります...)</div>
+        <div class="phrase-item">30. I'm going to sleep now. (もう寝ます。)</div>
+        <div class="phrase-item">31. I'm going outside. (外に出てきます。)</div>
+        <div class="phrase-item">32. I'm hungry/thirsty. (お腹が空きました/喉が渇きました。)</div>
+        <div class="phrase-item">33. It is cold/hot today. (今日は寒い/暑いです。)</div>
+        <div class="phrase-item">34. Yes, please. (はい、お願いします。)</div>
+        <div class="phrase-item">35. No, thank you. (いいえ、結構です。)</div>
+        <div class="phrase-item">36. I'm learning English. (英語を勉強中です。)</div>
+        <div class="phrase-item">37. I enjoyed playing [Sport]. (～をして楽しかったです。)</div>
+        <div class="phrase-item">38. This [food] is very good. (この～はとても美味しいです。)</div>
+        <div class="phrase-item">39. I have a little homework. (少し宿題があります。)</div>
+        <div class="phrase-item">40. I feel much better now. (気分がずっと良くなりました。)</div>
+    </div>
+
+    <h2>4. 困った時・確認 (Trouble & Confirmation) [10フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">41. Could you say that again, please? (もう一度言っていただけますか？)</div>
+        <div class="phrase-item">42. Could you speak slowly? (ゆっくり話していただけますか？)</div>
+        <div class="phrase-item">43. I don't understand. (分かりません。)</div>
+        <div class="phrase-item">44. What does [word] mean? (～はどういう意味ですか？)</div>
+        <div class="phrase-item">45. I have a headache/stomachache. (頭/お腹が痛いです。)</div>
+        <div class="phrase-item">46. Is this right? (これで合っていますか？)</div>
+        <div class="phrase-item">47. I am sorry, I am late. (遅れてごめんなさい。)</div>
+        <div class="phrase-item">48. Where should I put my shoes? (靴はどこに置くべきですか？)</div>
+        <div class="phrase-item">49. Excuse me, where is [place]? (すみません、～はどこですか？)</div>
+        <div class="phrase-item">50. Thank you for your patience. (辛抱強く待ってくれてありがとう。)</div>
+    </div>
+</div>
+
+<div class="page">
+    <h2>✅ 最終出発前チェックリスト</h2>
     <p>最終確認を行い、忘れ物のないよう準備しましょう。</p>
 
     <h3>📚 書類・身の回り品</h3>
     <div style="column-count: 2; column-gap: 30px;">
         <div class="checklist-item"><input type="checkbox"> <strong>パスポート</strong></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>搭乗券</strong> (チェックイン後に受け取り)</div>
-        <div class="checklist-item"><input type="checkbox"> <strong>入国カード/税関申告書</strong> (機内で記入/提示)</div>
-        <div class="checklist-item"><input type="checkbox"> 研修旅行のしおり <span class="inferred-note">(しおり一式として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> 財布/現地通貨 (オーストラリアドル) <span class="inferred-note">(現地での飲食/土産購入のため推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>海外旅行保険証</strong> <span class="inferred-note">(海外旅行の必需品として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> 常備薬/酔い止め薬</div>
+        <div class="checklist-item"><input type="checkbox"> <strong>搭乗券</strong> (チェックイン後に受け取る)</div>
+        <div class="checklist-item"><input type="checkbox"> <strong><a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>携行品・別送品申告書</strong> (機内で記入)</div>
+        <div class="checklist-item"><input type="checkbox"> 研修旅行のしおり</div>
+        <div class="checklist-item"><input type="checkbox"> <strong>財布（現金・カード入れ）</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>現地通貨</strong> (オーストラリアドル)</div>
+        <div class="checklist-item"><input type="checkbox"> <strong><a href="https://www.revolut.com/ja-JP/" target="_blank" rel="noopener noreferrer">Revolut</a>ジュニアカード</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>海外旅行保険証</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 常備薬（酔い止め薬など）</div>
         <div class="checklist-item"><input type="checkbox"> スマホ/カメラ (手荷物へ)</div>
-        <div class="checklist-item"><input type="checkbox"> 充電器/変換プラグ (Oタイプ) <span class="inferred-note">(オーストラリアのプラグ形状として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> 英会話学習用メモ/単語帳 (CEFR A2レベルを意識) <span class="inferred-note">(英会話学習中のため推定)</span></div>
+        <div class="checklist-item"><input type="checkbox"> 充電器/変換プラグ (<a href="https://wise.com/gb/plug-types/australia" target="_blank" rel="noopener noreferrer">Oタイプ</a>) <span class="inferred-note">💡【追記アドバイス】オーストラリアのプラグ形状です。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>スマホ用3-in-1ケーブル</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>USB-C to Cケーブル</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>Type-Aポート付タップケーブル</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>英会話学習用メモ/単語帳</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>筆記用具</strong> (機内で書類記入に必須)</div>
     </div>
 
     <h3>👗 衣類・身だしなみ</h3>
     <div style="column-count: 2; column-gap: 30px;">
         <div class="checklist-item"><input type="checkbox"> <strong>制服</strong> (4日目、5日目に必要)</div>
         <div class="checklist-item"><input type="checkbox"> <strong>体操服</strong> (5日目、または現地校交流用)</div>
-        <div class="checklist-item"><input type="checkbox"> 私服（5日分） <span class="inferred-note">(6日間のうち制服の日を除く日数として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> 下着・靴下 (日数分) <span class="inferred-note">(常識的な持ち物として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> パジャマ (ホストファミリー宅用) <span class="inferred-note">(常識的な持ち物として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> 羽織るもの (寒暖差対策) <span class="inferred-note">(オーストラリアの10月は春のため推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> タオル・洗面用具 <span class="inferred-note">(常識的な持ち物として推定)</span></div>
-        <div class="checklist-item"><input type="checkbox"> 液体物 (100ml以下に小分け)</div>
-        <div class="checklist-item"><input type="checkbox"> 日焼け止め/帽子 <span class="inferred-note">(オーストラリアの紫外線対策として推定)</span></div>
+        <div class="checklist-item"><input type="checkbox"> 私服（5日分）</div>
+        <div class="checklist-item"><input type="checkbox"> 下着・靴下 (日数分)</div>
+        <div class="checklist-item"><input type="checkbox"> パジャマ (ホストファミリー宅用)</div>
+        <div class="checklist-item"><input type="checkbox"> 羽織るもの (寒暖差対策) <span class="inferred-note">💡【追記アドバイス】オーストラリアの10月は春ですが、朝晩は冷えることがあります。</span></div>
+        <div class="checklist-item"><input type="checkbox"> タオル・洗面用具</div>
+        <div class="checklist-item"><input type="checkbox"> 液体物 (100ml以下に小分け/透明袋に収納)</div>
+        <div class="checklist-item"><input type="checkbox"> 日焼け止め/帽子 <span class="inferred-note">💡【追記アドバイス】オーストラリアは紫外線が強いので対策は必須です。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>ヘアアイロン</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。電源コード式は可、バッテリー式はリチウム電池の取り扱いに注意。</span></div>
     </div>
 
-    <h3>🛄 手荷物・スーツケース</h3>
+    <h3>✈️ 機内での快適グッズ（手荷物へ）</h3>
+    <div style="column-count: 2; column-gap: 30px;">
+        <div class="checklist-item"><input type="checkbox"> <strong>アイマスク、耳栓</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>ネックピロー、スリッパ</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>のど飴、ガム</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>空の水筒</strong> (検査後に水を補充)</div>
+        <div class="checklist-item"><input type="checkbox"> <strong>保湿用マスク</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>歯磨きセット</strong> (100ml以下の透明袋へ)</div>
+    </div>
+
+    <h3>🛄 受託手荷物・機内持込手荷物</h3>
     <div style="column-count: 2; column-gap: 30px;">
         <div class="checklist-item"><input type="checkbox"> <strong>受託手荷物</strong>：スーツケース（<strong>20kg以内</strong>）</div>
         <div class="checklist-item"><input type="checkbox"> <strong>手荷物</strong>：貴重品・カメラ・電子機器類</div>
         <div class="checklist-item"><input type="checkbox"> <strong>手荷物</strong>：液体物（100ml以下）</div>
-        <div class="checklist-item"><input type="checkbox"> <strong>機内持込禁止物</strong>（刃物類、火薬類、引火性液体等）は入れていない</div>
+        <div class="checklist-item"><input type="checkbox"> <strong>機内持込禁止物</strong>（刃物類等）は入れていない</div>
     </div>
 
     <hr>
     <h3>📌 ホームステイ最終確認</h3>
     <div style="column-count: 2; column-gap: 30px;">
-        <div class="checklist-item"><input type="checkbox"> ホストファミリーへのお礼の言葉を練習した <span class="inferred-note">(ホームステイのため推定)</span></div>
+        <div class="checklist-item"><input type="checkbox"> ホストファミリーへのお礼の言葉を練習した</div>
         <div class="checklist-item"><input type="checkbox"> 日本文化紹介の準備をした</div>
     </div>
     <div class="notes" style="margin-top: 20px;">
-        <strong>旅行会社連絡先:</strong> 株式会社JTB 京都中央支店 TEL: 075 (284) 0172
+        <strong>旅行会社連絡先:</strong> <a href="https://branch.jtbbwt.com/j6741-0" target="_blank" rel="noopener noreferrer">株式会社JTB 京都中央支店</a> TEL: 075 (284) 0172
     </div>
 </div>
 </body>
