@@ -3,1233 +3,1043 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>京都文教中学校 オーストラリア研修旅行</title>
+    <title>京都文教中学校 2025年度 オーストラリア研修旅行 旅程表＆チェックリスト</title>
     <style>
-        * {
+        /* 基本設定 */
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-            line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5;
-            padding-bottom: 30px;
+            line-height: 1.55;
+            font-size: 13px;
+            background-color: #f7f7f7;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
+        /* 印刷/表示用のページコンテナ */
+        .page, .overview-section {
             background-color: #fff;
+            margin: 20px auto;
+            padding: 18mm;
+            max-width: 850px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
         }
-        
-        header {
-            background: linear-gradient(135deg, #004d40 0%, #00796b 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            font-size: 1.3em;
-            margin-bottom: 8px;
-        }
-        
-        header p {
-            font-size: 0.9em;
-            opacity: 0.95;
-        }
-        
-        nav {
-            background-color: #e0f2f1;
-            padding: 12px;
-            position: sticky;
-            top: 80px;
-            z-index: 99;
-            border-bottom: 2px solid #00796b;
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        nav a {
-            display: inline-block;
-            padding: 8px 16px;
-            margin: 0 4px;
-            background-color: white;
-            color: #00796b;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        nav a:hover, nav a:active {
-            background-color: #00796b;
-            color: white;
-        }
-        
-        .section {
-            padding: 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-        }
-        
-        h2 {
-            color: #00796b;
-            font-size: 1.3em;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #00796b;
-        }
-        
-        h3 {
-            color: #4db6ac;
-            font-size: 1.1em;
-            margin: 16px 0 8px 0;
-        }
-        
-        .info-box {
-            background-color: #e0f2f1;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 12px 0;
-            border-left: 4px solid #00796b;
-        }
-        
-        .info-box strong {
-            color: #00796b;
-        }
-        
-        .warning-box {
-            background-color: #fff3e0;
-            border-left: 4px solid #ff9800;
-            padding: 15px;
-            margin: 12px 0;
-            border-radius: 8px;
-        }
-        
-        .warning-box ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-        
-        .day-card {
-            background-color: white;
-            border: 2px solid #e0f2f1;
-            border-radius: 12px;
-            padding: 16px;
-            margin: 12px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .day-header {
-            background: linear-gradient(135deg, #00796b 0%, #4db6ac 100%);
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            font-weight: bold;
-        }
-        
-        .schedule-item {
-            padding: 12px;
-            margin: 8px 0;
-            background-color: #fafafa;
-            border-radius: 8px;
-            border-left: 4px solid #4db6ac;
-        }
-        
-        .time {
-            display: inline-block;
-            background-color: #00796b;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        
-        .location {
-            font-weight: bold;
-            color: #00796b;
-            margin: 4px 0;
-        }
-        
-        .meal-tag {
-            display: inline-block;
-            background-color: #ffb74d;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 8px;
-            font-size: 0.8em;
-            margin: 2px;
-        }
-        
-        .checklist {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .checklist-item {
-            padding: 10px;
-            margin: 6px 0;
-            background-color: #fafafa;
-            border-radius: 8px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .checklist-item input[type="checkbox"] {
-            margin-right: 12px;
-            margin-top: 4px;
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-        }
-        
-        .phrase-card {
-            background-color: #f5f5f5;
-            padding: 10px;
-            margin: 6px 0;
-            border-radius: 8px;
-            border-left: 3px solid #4db6ac;
-        }
-        
-        .phrase-en {
-            font-weight: bold;
-            color: #00796b;
-            margin-bottom: 4px;
-        }
-        
-        .phrase-ja {
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        a {
-            color: #00796b;
-            text-decoration: underline;
-        }
-        
-        .overview-table {
-            width: 100%;
-            margin: 12px 0;
-            border-collapse: collapse;
-        }
-        
-        .overview-table th,
-        .overview-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .overview-table th {
-            background-color: #e0f2f1;
-            color: #00796b;
-            font-weight: bold;
-        }
-        
-        .note {
-            font-style: italic;
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 4px;
-        }
-        
-        .emergency {
-            background-color: #ffebee;
-            border: 2px solid #f44336;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 12px 0;
-            font-weight: bold;
-        }
-        
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 15px 10px;
-                top: 0;
+        /* 印刷時の改ページ設定 */
+        @media print {
+            body { background-color: #fff; }
+            .page, .overview-section {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                page-break-inside: avoid;
+                padding: 12mm;
             }
-            
-            header h1 {
-                font-size: 1.1em;
+            .page:last-child { page-break-after: avoid; }
+            .page-nav { display: none; }
+            .phrase-list { column-count: 2; }
+            @page { 
+                margin: 12mm;
+                size: A4;
             }
-            
-            header p {
-                font-size: 0.85em;
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
-            
-            nav {
-                top: 70px;
-                padding: 8px;
-            }
-            
-            nav a {
-                font-size: 0.85em;
-                padding: 6px 12px;
-            }
-            
-            .section {
-                padding: 15px;
-            }
-            
             h2 {
-                font-size: 1.2em;
+                page-break-after: avoid;
+                margin-top: 0;
             }
-            
-            .overview-table {
+            h3 {
+                page-break-after: avoid;
+            }
+            table {
+                page-break-inside: avoid;
+            }
+            .notes, .tips-box, .finance-box {
+                page-break-inside: avoid;
+            }
+            ul, ol {
+                page-break-inside: avoid;
+            }
+        }
+        /* 見出しのデザイン */
+        h1 { 
+            text-align: center; 
+            color: #004d40; 
+            border-bottom: 4px solid #004d40; 
+            padding-bottom: 8px; 
+            font-size: 1.75em;
+            margin-bottom: 16px;
+        }
+        h2 { 
+            color: #00796b; 
+            border-left: 6px solid #00796b; 
+            padding-left: 12px; 
+            margin-top: 20px;
+            margin-bottom: 14px;
+            font-size: 1.35em;
+            background: linear-gradient(to right, #e0f2f1 0%, transparent 100%);
+            padding: 8px 12px;
+        }
+        h3 { 
+            color: #4db6ac; 
+            margin-top: 14px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            border-bottom: 2px dotted #b2dfdb;
+            padding-bottom: 4px;
+        }
+        /* テーブルのデザイン */
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 8px 10px; 
+            text-align: left; 
+            vertical-align: top;
+        }
+        th { 
+            background-color: #e0f2f1; 
+            color: #004d40; 
+            font-weight: bold; 
+            width: 20%;
+        }
+        /* リンク */
+        a { 
+            color: #00796b; 
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        a:hover { 
+            text-decoration: underline;
+            color: #004d40;
+        }
+        /* 注意事項ボックス */
+        .notes { 
+            background-color: #fffde7; 
+            border: 2px solid #ffc107; 
+            border-left: 6px solid #ffc107;
+            padding: 15px; 
+            margin-top: 18px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .notes h3 {
+            margin-top: 0;
+            color: #f57c00;
+            border: none;
+        }
+        .notes ul {
+            margin-bottom: 0;
+        }
+        /* チェックリスト */
+        .checklist-item { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 8px;
+            padding: 4px;
+            transition: background-color 0.2s;
+        }
+        .checklist-item:hover {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .checklist-item input[type="checkbox"] { 
+            margin-right: 12px; 
+            margin-top: 4px;
+            transform: scale(1.4);
+            cursor: pointer;
+        }
+        /* 追記アドバイス */
+        .inferred-note { 
+            font-style: italic; 
+            color: #7b1fa2; 
+            font-size: 0.88em; 
+            display: block; 
+            margin-top: 5px;
+            padding-left: 8px;
+            border-left: 3px solid #ce93d8;
+        }
+        /* 英会話フレーズリスト */
+        .phrase-list { 
+            column-count: 2; 
+            column-gap: 35px;
+        }
+        .phrase-item { 
+            margin-bottom: 10px; 
+            break-inside: avoid-column;
+            padding: 6px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+        /* その他 */
+        .finance-box { 
+            border: 3px solid #00796b; 
+            padding: 18px; 
+            margin-top: 22px;
+            margin-bottom: 22px;
+            background-color: #e0f2f1; 
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        .icon { 
+            margin-right: 6px; 
+            font-size: 1.3em;
+            display: inline-block;
+        }
+        .overview-table th { width: auto; }
+        .page-nav { 
+            text-align: right; 
+            margin-bottom: 18px; 
+            font-size: 0.9em;
+        }
+        .page-nav a { 
+            margin-left: 12px; 
+            padding: 8px 14px; 
+            background-color: #e0f2f1; 
+            border-radius: 6px; 
+            color: #004d40; 
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .page-nav a:hover { 
+            background-color: #b2dfdb; 
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        /* 会話TIPS用のスタイル */
+        .tips-box {
+            margin-top: 28px;
+            margin-bottom: 28px;
+            padding: 18px;
+            background: linear-gradient(135deg, #f0fff0 0%, #e8f5e9 100%);
+            border: 3px solid #2e8b57;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+        .tips-box h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: #2e8b57;
+            text-align: center;
+            font-size: 1.2em;
+            border: none;
+        }
+        .tips-box ul {
+            padding-left: 0;
+            list-style-type: none;
+            margin: 0;
+        }
+        .tips-box li {
+            margin-bottom: 18px;
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #66bb6a;
+        }
+        .tips-box li:last-child {
+            margin-bottom: 0;
+        }
+        .english-phrase {
+            font-weight: bold;
+            color: #1565c0;
+            display: block;
+            margin-top: 6px;
+            font-size: 1.05em;
+        }
+        .japanese-translation {
+            font-size: 0.92em;
+            color: #666;
+            display: block;
+            margin-top: 4px;
+        }
+        
+        /* 緊急連絡先テーブル用の追加スタイル */
+        .emergency-contacts th { 
+            width: 30%;
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .emergency-contacts td, 
+        .emergency-contacts th { 
+            text-align: left; 
+            vertical-align: middle;
+        }
+        
+        /* 重要項目の強調 */
+        strong {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .page, .overview-section {
+                padding: 15px;
+                margin: 10px;
+            }
+            h1 { font-size: 1.5em; }
+            h2 { font-size: 1.25em; }
+            h3 { font-size: 1.1em; }
+            .phrase-list {
+                column-count: 1;
+            }
+            table {
                 font-size: 0.9em;
             }
-            
-            .overview-table th,
-            .overview-table td {
+            th, td {
                 padding: 8px;
             }
-        }
-        
-        @media print {
-            header {
-                position: relative;
+            .page-nav {
+                text-align: center;
             }
-            
-            nav {
-                display: none;
+            .page-nav a {
+                display: inline-block;
+                margin: 5px;
             }
-            
-            .section {
-                page-break-inside: avoid;
+            .tips-box {
+                padding: 12px;
             }
         }
     </style>
 </head>
-<body>
-<div class="container">
-    <header>
-        <h1>🇦🇺 京都文教中学校 オーストラリア研修旅行</h1>
-        <p>2025年10月17日(金) ～ 10月22日(水)</p>
-    </header>
-    
-    <nav>
-        <a href="#overview">概要</a>
-        <a href="#day1">1日目</a>
-        <a href="#day2">2日目</a>
-        <a href="#day3">3日目</a>
-        <a href="#day4">4日目</a>
-        <a href="#day5">5日目</a>
-        <a href="#day6">6日目</a>
-        <a href="#phrases">英会話</a>
-        <a href="#checklist">持ち物</a>
+<body id="top">
+
+<div class="overview-section">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
     </nav>
-    
-    <div class="section" id="overview">
-        <h2>📋 旅行概要</h2>
-        
-        <div class="info-box">
-            <p><strong>期間:</strong> 2025年10月17日(金) ～ 10月22日(水) 【6日間】</p>
-            <p><strong>方面:</strong> オーストラリア（ブリスベン、ゴールドコースト）</p>
-            <p><strong>参加:</strong> 生徒46名・先生4名・看護師1名</p>
-            <p><strong>航空:</strong> ジェットスター航空 (JQ)</p>
-        </div>
-        
-        <div class="warning-box">
-            <h3>⚠️ 重要事項</h3>
-            <ul>
-                <li>LCC（格安航空）のため、<strong>機内の飲み物は有料</strong>です</li>
-                <li>航空スケジュールは変更の可能性があります</li>
-                <li>パスポートは必ず携帯してください</li>
-            </ul>
-        </div>
-        
-        <h3>📅 日程表</h3>
-        <table class="overview-table">
-            <thead>
-                <tr>
-                    <th style="width: 25%;">日付</th>
-                    <th>主な内容</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>10/17 (金)</td>
-                    <td>京都駅集合 → 関空 → ブリスベンへ（機内泊）</td>
-                </tr>
-                <tr>
-                    <td>10/18 (土)</td>
-                    <td>ブリスベン着 → 市内観光 → ホームステイ開始</td>
-                </tr>
-                <tr>
-                    <td>10/19 (日)</td>
-                    <td>ホストファミリーと終日過ごす</td>
-                </tr>
-                <tr>
-                    <td>10/20 (月)</td>
-                    <td>現地校で英語レッスン・バディ交流</td>
-                </tr>
-                <tr>
-                    <td>10/21 (火)</td>
-                    <td>日本文化紹介・フェアウェルセレモニー</td>
-                </tr>
-                <tr>
-                    <td>10/22 (水)</td>
-                    <td>ブリスベン発 → 関空 → 京都着</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <div class="emergency">
-            📞 緊急連絡先: 株式会社JTB 京都中央支店<br>
-            TEL: 075-284-0172
-        </div>
-    </div>
-    
-    <div class="section" id="day1">
-        <h2>✈️ 1日目: 10月17日(金)</h2>
-        
-        <div class="day-card">
-            <div class="day-header">京都 → 関空 → ブリスベンへ（機内泊）</div>
-            
-            <div class="schedule-item">
-                <span class="time">16:10</span>
-                <div class="location">📍 京都駅劇場前広場</div>
-                <p>集合（パスポート確認）</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">17:00発</span>
-                <div class="location">🚅 JR特急はるか45号</div>
-                <p>京都駅 → 関西空港</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">18:26着</span>
-                <div class="location">📍 関西国際空港</div>
-                <p>チェックイン・搭乗手続き・出国審査</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">21:45発</span>
-                <div class="location">✈️ JQ24便</div>
-                <p>関空 → ブリスベンへ（機内泊）</p>
-                <span class="meal-tag">🍽️ 夕食・朝軽食</span>
-                <div class="note">機内食は2回提供されます</div>
-            </div>
-        </div>
-        
-        <h3>✅ 必要なもの</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span><strong>パスポート</strong></span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>手荷物（貴重品・カメラ・充電器）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>酔い止め薬・常備薬</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>機内用：ネックピロー・アイマスク・耳栓</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>空のペットボトル（検査後に水を補充）</span>
-            </li>
+    <h1 id="itinerary"><a href="https://school.hs-kbu.jp/junior-jhs/" target="_blank" rel="noopener noreferrer">京都文教中学校</a> 2025年度 海外研修旅行 旅程表</h1>
+    <h2>🇦🇺 オーストラリア方面 6日間 (ホームステイ含む)</h2>
+    <p><strong>旅行期間:</strong> 2025年10月17日(金) ~ 2025年10月22日(水)</p>
+    <p><strong>旅行方面:</strong> オーストラリア 方面 (ブリスベン、ゴールドコースト近郊)</p>
+    <p><strong>参加人員:</strong> 生徒46名様・先生4名様・看護師1名 (添乗員1名同行)</p>
+    <p><strong>航空会社:</strong> JQ (<a href="https://www.jetstar.com/jp/ja/home" target="_blank" rel="noopener noreferrer">ジェットスター航空</a>)</p>
+    <p><strong>旅行会社:</strong> 株式会社JTB 京都中央支店 (支店長: 椙西祐一郎様 / 担当者: 春木暁一様)</p>
+
+    <div class="notes">
+        <h3>⚠️【重要事項】</h3>
+        <ul>
+            <li>✈️ 航空会社のフライトスケジュールは変更となる場合がございます。</li>
+            <li>🚌 ご旅程は運輸機関のダイヤ改正及び各地の道路状況により多少時間が変更になる場合がございます。</li>
+            <li>💧 機内での飲み物は有料なため、必要な分は買っておくこと。</li>
         </ul>
     </div>
-    
-    <div class="section" id="day2">
-        <h2>🐨 2日目: 10月18日(土)</h2>
-        
-        <div class="day-card">
-            <div class="day-header">ブリスベン到着・市内観光・ホームステイ開始</div>
-            
-            <div class="schedule-item">
-                <span class="time">07:25着</span>
-                <div class="location">📍 ブリスベン空港</div>
-                <p>入国審査・荷物受取・税関申告</p>
-                <span class="meal-tag">🍽️ 朝食（機内）</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">09:10着</span>
-                <div class="location">📍 マウントクーサ</div>
-                <p>クラス写真撮影・自由散策</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">09:40着</span>
-                <div class="location">📍 ローンパインコアラ保護区</div>
-                <p>園内自由行動</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">11:45</span>
-                <div class="location">🍔 SOUTHBANK BEER GARDEN</div>
-                <p>昼食（ビーフバーガー等）</p>
-                <span class="meal-tag">🍽️ 昼食</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">14:00/15:40着</span>
-                <div class="location">🏫 現地校</div>
-                <p>ホストファミリーと対面・各家庭へ</p>
-                <span class="meal-tag">🍽️ 夕食（各家庭）</span>
-            </div>
-        </div>
-        
-        <h3>✅ 必要なもの</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span><strong>パスポート</strong>（入国審査用）</span>
+
+    <h2>旅程概要</h2>
+    <table class="overview-table">
+        <tr>
+            <th>日付</th>
+            <th>曜日</th>
+            <th>主な行程</th>
+        </tr>
+        <tr>
+            <td>10月17日</td>
+            <td>(金)</td>
+            <td>京都駅集合、関西空港からブリスベンへ出発 (機内泊)</td>
+        </tr>
+        <tr>
+            <td>10月18日</td>
+            <td>(土)</td>
+            <td>ブリスベン到着、市内観光、ホストファミリーと対面・ホームステイ開始</td>
+        </tr>
+        <tr>
+            <td>10月19日</td>
+            <td>(日)</td>
+            <td>終日ホストファミリーと過ごす (ホームステイ)</td>
+        </tr>
+        <tr>
+            <td>10月20日</td>
+            <td>(月)</td>
+            <td>現地校にて英語レッスン、バディとの交流プログラム</td>
+        </tr>
+        <tr>
+            <td>10月21日</td>
+            <td>(火)</td>
+            <td>現地校にて日本文化紹介、交流、フェアウェルセレモニー</td>
+        </tr>
+        <tr>
+            <td>10月22日</td>
+            <td>(水)</td>
+            <td>ブリスベン出発、関西空港経由で京都へ帰着</td>
+        </tr>
+    </table>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>✈️ 1日目: 10月17日(金) - 関西空港へ、ブリスベンへ (機内泊)</h2>
+    <table>
+        <tr>
+            <th>時刻</th>
+            <th>行先/場所</th>
+            <th>内容</th>
+            <th>交通機関</th>
+            <th>食事</th>
+        </tr>
+        <tr>
+            <td>16:10</td>
+            <td>京都駅劇場前広場</td>
+            <td><strong>集合</strong> (パスポート持参確認)。(※あらかじめトイレに行っておくこと)</td>
+            <td></td>
+            <td rowspan="4">夕: 機内</td>
+        </tr>
+        <tr>
+            <td>17:00発</td>
+            <td>京都駅 → 関西国際空港</td>
+            <td>JR特急はるか45号にて関西空港へ。</td>
+            <td><span class="icon">🚅</span> <a href="https://www.westjr.co.jp/travel-information/jp/tickets-passes/oneway/haruka/" target="_blank" rel="noopener noreferrer">JR特急はるか</a></td>
+        </tr>
+        <tr>
+            <td>18:26着</td>
+            <td><a href="https://www.kansai-airport.or.jp/" target="_blank" rel="noopener noreferrer">関西国際空港 (KIX)</a></td>
+            <td>チェックイン、搭乗手続き、出国手続き。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>21:45発</td>
+            <td>関西国際空港 → ブリスベン</td>
+            <td>空路、ブリスベンへ (機内泊)。機内食は夕食・朝軽食の2回出ます。</td>
+            <td><span class="icon">✈️</span> <a href="https://www.jetstar.com/jp/ja/home" target="_blank" rel="noopener noreferrer">JQ24便</a></td>
+        </tr>
+    </table>
+    <h3>✅ 1日目に必要なもの(特に重要なもの)</h3>
+    <ul>
+        <li>📘 <strong>パスポート</strong></li>
+        <li>🎫 <strong>搭乗券</strong> (チェックイン後に受け取る)</li>
+        <li>🎒 <strong>手荷物</strong>(貴重品・カメラ・電子機器類)</li>
+        <li>💊 <strong>機内で必要なもの</strong>(酔い止め薬、有料ドリンク用の現金、軽食)</li>
+        <li>👔 <strong>服装</strong>: 私服</li>
+    </ul>
+
+    <div class="tips-box">
+        <h3>💬 2日目に役立つ!ホストファミリーとの初対面会話TIPS</h3>
+        <ul>
+            <li>
+                <strong>1.最高の第一印象!笑顔でのあいさつ</strong><br>
+                元気な声で、相手の目を見て言いましょう。
+                <span class="english-phrase">"Hello! Nice to meet you. I'm Rio."</span>
+                <span class="japanese-translation">(こんにちは!はじめまして。りおです。)</span>
             </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ホストファミリーへのお土産（あれば）</span>
+            <li>
+                <strong>2.お土産を渡すとき</strong><br>
+                感謝の気持ちを込めて。"This is a small gift for you." と言って渡すと、より丁寧です。
+                <span class="english-phrase">"I hope you like it."</span>
+                <span class="japanese-translation">(気に入ってくれると嬉しいです。)</span>
             </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>自己紹介の準備</span>
+            <li>
+                <strong>3.フライトどうだった?と聞かれたら</strong><br>
+                長旅で疲れていても、"It was good." や "I'm a little tired, but I'm so excited!" など、ポジティブに答えると好印象です。
+                <span class="english-phrase">"It was a long flight, but I'm happy to be here."</span>
+                <span class="japanese-translation">(長いフライトでしたが、ここに来られて嬉しいです。)</span>
             </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>私服（動きやすい服装）</span>
+            <li>
+                <strong>4.お家に着いたら</strong><br>
+                家に入れてもらったら、感謝を伝えましょう。
+                <span class="english-phrase">"Thank you for having me."</span>
+                <span class="japanese-translation">(お家に泊めてくれてありがとうございます。)</span>
             </li>
         </ul>
     </div>
-    
-    <div class="section" id="day3">
-        <h2>🏡 3日目: 10月19日(日)</h2>
-        
-        <div class="day-card">
-            <div class="day-header">終日ホストファミリーと過ごす</div>
-            
-            <div class="schedule-item">
-                <div class="location">🏠 ホームステイ</div>
-                <p>ホストファミリーと一日を過ごします</p>
-                <span class="meal-tag">🍽️ 朝・昼・夕（各家庭）</span>
-            </div>
-        </div>
-        
-        <h3>✅ 必要なもの</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>積極的にコミュニケーションを取る姿勢</span>
+
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>🏨 2日目: 10月18日(土) - ブリスベン到着、市内観光、ホストファミリーと対面</h2>
+    <table>
+        <tr>
+            <th>時刻</th>
+            <th>行先/場所</th>
+            <th>内容</th>
+            <th>交通機関</th>
+            <th>食事</th>
+        </tr>
+        <tr>
+            <td>07:25着</td>
+            <td><a href="https://www.bne.com.au/" target="_blank" rel="noopener noreferrer">ブリスベン空港 (BNE)</a></td>
+            <td>入国審査、荷物ピックアップ、税関申告。ガイドと合流。</td>
+            <td></td>
+            <td>朝: 機内</td>
+        </tr>
+        <tr>
+            <td>08:40発</td>
+            <td>ブリスベン市内へ</td>
+            <td>専用バスにてブリスベン市内へ。バス内でミネラルウォーター配布あり。</td>
+            <td><span class="icon">🚌</span> 専用バス</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>09:10着</td>
+            <td><a href="https://www.brisbane.qld.gov.au/things-to-see-and-do/council-venues-and-precincts/mt-coot-tha-precinct" target="_blank" rel="noopener noreferrer">マウントクーサ</a></td>
+            <td>クラス写真・学年写真撮影後、自由散策。</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>09:40着</td>
+            <td><a href="https://lonepinekoalasanctuary.com/" target="_blank" rel="noopener noreferrer">ローンパインコアラ保護区</a></td>
+            <td>クラス写真・学年写真撮影後、園内自由行動。</td>
+            <td></td>
+            <td rowspan="3">昼: レストラン<br>夕: 各家庭</td>
+        </tr>
+        <tr>
+            <td>11:45着</td>
+            <td>レストラン</td>
+            <td>昼食: <a href="https://www.southbankbeergarden.com.au/" target="_blank" rel="noopener noreferrer">SOUTHBANK BEER GARDEN</a>にて(ビーフバーガー等)。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14:00/15:40着</td>
+            <td><a href="https://pimpamass.eq.edu.au/" target="_blank" rel="noopener noreferrer">Pimpama State School</a> / <a href="https://pacificpinesss.eq.edu.au/" target="_blank" rel="noopener noreferrer">Pacific Pines State School</a></td>
+            <td>現地校へ移動。ホストファミリーと対面、各家庭へ。</td>
+            <td><span class="icon">🚌</span> 専用バス</td>
+        </tr>
+    </table>
+    <h3>✅ 2日目に必要なもの(特に重要なもの)</h3>
+    <ul style="margin-bottom: 0;">
+        <li>📘 <strong>パスポート</strong> (入国審査・税関申告のため)</li>
+        <li>💊 <strong>酔い止め薬</strong> (バス移動前)</li>
+        <li>👕 <strong>移動しやすい服装</strong> (私服、17日と同じ服)</li>
+        <li>🎁 <strong>ホストファミリーへのお土産</strong>(あれば)</li>
+        <li>📝 <strong>自己紹介で使える簡単な英語フレーズ</strong></li>
+    </ul>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>🏡 3日目: 10月19日(日) - ホームステイ (終日)</h2>
+    <table>
+        <tr>
+            <th>時刻</th>
+            <th>行先/場所</th>
+            <th>内容</th>
+            <th>交通機関</th>
+            <th>食事</th>
+        </tr>
+        <tr>
+            <td>終日</td>
+            <td>ゴールドコースト近郊</td>
+            <td><strong>終日、ホストファミリーとお過ごしいただきます</strong> (ホームステイ)。</td>
+            <td>-</td>
+            <td>朝: 各家庭<br>昼: 各家庭<br>夕: 各家庭</td>
+        </tr>
+    </table>
+    <h3>✅ 3日目に必要なもの(特に重要なもの)</h3>
+    <ul>
+        <li>💬 <strong>ホストファミリーとの会話を楽しむ意欲</strong></li>
+        <li>📔 <strong>筆記用具、メモ帳</strong></li>
+        <li>🎌 <strong>日本の文化紹介グッズ</strong>(折り紙など、あれば)</li>
+        <li>👕 <strong>私服</strong></li>
+    </ul>
+
+    <div class="tips-box">
+        <h3>🏡 3日目に役立つ!ホストファミリーとの休日を楽しむ会話TIPS</h3>
+        <ul>
+            <li>
+                <strong>1.今日の予定を聞いてみよう</strong><br>
+                ワクワクした気持ちで尋ねてみましょう。
+                <span class="english-phrase">"What is the plan for today? I'm so excited!"</span>
+                <span class="japanese-translation">(今日の予定は何ですか?すごく楽しみです!)</span>
             </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>メモ帳・筆記用具</span>
+            <li>
+                <strong>2.楽しさを表現する</strong><br>
+                一緒に何かをしている時に、気持ちを伝えると喜ばれます。
+                <span class="english-phrase">"This is really fun! Thank you for taking me here."</span>
+                <span class="japanese-translation">(これ、すごく楽しいです!連れてきてくれてありがとう。)</span>
             </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>日本文化紹介グッズ（折り紙など）</span>
+            <li>
+                <strong>3.日本の休日の過ごし方を話してみる</strong><br>
+                会話のきっかけに、自分のことを話してみましょう。
+                <span class="english-phrase">"In Japan, my family and I often go shopping on weekends."</span>
+                <span class="japanese-translation">(日本では、週末はよく家族と買い物に行きます。)</span>
             </li>
-        </ul>
-    </div>
-    
-    <div class="section" id="day4">
-        <h2>🏫 4日目: 10月20日(月)</h2>
-        
-        <div class="day-card">
-            <div class="day-header">現地校で英語レッスン・バディ交流</div>
-            
-            <div class="schedule-item">
-                <span class="time">08:00-08:30</span>
-                <div class="location">🏫 現地校着</div>
-                <p>ホストファミリーの送迎で登校</p>
-                <span class="meal-tag">🍽️ 朝食（各家庭）</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">終日</span>
-                <div class="location">📚 Pimpama/Pacific Pines State School</div>
-                <p>・ウェルカムセレモニー<br>
-                ・バディとの対面・交流<br>
-                ・文教生だけの英語授業<br>
-                ・授業参加・スポーツ交流</p>
-                <span class="meal-tag">🍱 昼食（バックランチ）</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">15:00発</span>
-                <div class="location">🏠 各家庭へ</div>
-                <p>ホストファミリーの送迎で帰宅</p>
-                <span class="meal-tag">🍽️ 夕食（各家庭）</span>
-            </div>
-        </div>
-        
-        <h3>✅ 必要なもの</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span><strong>制服</strong></span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>バックランチ（ホストが用意）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>バディとの話題準備</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>貴重品はスーツケースに鍵をかけて保管</span>
-            </li>
-        </ul>
-    </div>
-    
-    <div class="section" id="day5">
-        <h2>👋 5日目: 10月21日(火)</h2>
-        
-        <div class="day-card">
-            <div class="day-header">日本文化紹介・フェアウェルセレモニー</div>
-            
-            <div class="schedule-item">
-                <span class="time">08:00-08:30</span>
-                <div class="location">🏫 現地校着</div>
-                <p>ホストファミリーの送迎で登校</p>
-                <span class="meal-tag">🍽️ 朝食（各家庭）</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">終日</span>
-                <div class="location">🎭 日本文化紹介・交流</div>
-                <p>・文教生による日本文化紹介<br>
-                ・バディの授業参加<br>
-                ・スポーツ交流<br>
-                ・フェアウェルセレモニー</p>
-                <span class="meal-tag">🍱 昼食（バックランチ）</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">15:00発</span>
-                <div class="location">🏠 各家庭へ</div>
-                <p>帰宅後、帰国準備</p>
-                <span class="meal-tag">🍽️ 夕食（各家庭）</span>
-            </div>
-        </div>
-        
-        <h3>✅ 必要なもの</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>制服 or 体操服（指示された方）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>日本文化紹介の準備物</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>スマホ（セレモニー時写真撮影可）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span><strong>帰国準備：スーツケース（20kg以内）</strong></span>
+            <li>
+                <strong>4.積極的にお手伝い!</strong><br>
+                食事の準備や片付けの時に、遠慮せずに声をかけてみましょう。
+                <span class="english-phrase">"Is there anything I can help with?"</span>
+                <span class="japanese-translation">(何かお手伝いできることはありますか?)</span>
             </li>
         </ul>
-    </div>
-    
-    <div class="section" id="day6">
-        <h2>🛬 6日目: 10月22日(水)</h2>
-        
-        <div class="day-card">
-            <div class="day-header">ブリスベン発・帰国</div>
-            
-            <div class="schedule-item">
-                <span class="time">07:00/07:40発</span>
-                <div class="location">🚌 各現地校発</div>
-                <p>ホストの送迎で学校集合 → 空港へ</p>
-                <span class="meal-tag">🍽️ 朝食（各家庭）</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">08:40着</span>
-                <div class="location">📍 ブリスベン空港</div>
-                <p>チェックイン・保安検査・出国審査</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">11:40発</span>
-                <div class="location">✈️ JQ23便</div>
-                <p>ブリスベン → 関西空港</p>
-                <span class="meal-tag">🍽️ 昼食・軽食</span>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">19:40着</span>
-                <div class="location">📍 関西空港</div>
-                <p>入国審査・荷物受取・税関申告</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">20:40発</span>
-                <div class="location">🚌 貸切バス</div>
-                <p>関空 → 京都駅</p>
-            </div>
-            
-            <div class="schedule-item">
-                <span class="time">22:10着</span>
-                <div class="location">📍 京都駅八条口</div>
-                <p>到着・解散</p>
-            </div>
-        </div>
-        
-        <h3>✅ 必要なもの</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span><strong>パスポート・搭乗券</strong></span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>携行品・別送品申告書</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>Visit Japan Web QRコード</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>酔い止め薬</span>
-            </li>
-        </ul>
-    </div>
-    
-    <div class="section" id="phrases">
-        <h2>💬 役立つ英会話50選</h2>
-        
-        <div class="info-box">
-            ホストファミリーやバディとの交流に使える簡単なフレーズ集です
-        </div>
-        
-        <h3>1. 挨拶・感謝 (10フレーズ)</h3>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">1. Hello. I'm Rio.</div>
-            <div class="phrase-ja">こんにちは。りおです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">2. Thank you for having me.</div>
-            <div class="phrase-ja">泊めてくれてありがとう。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">3. It's great to be here.</div>
-            <div class="phrase-ja">ここに来られて嬉しいです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">4. Good morning/afternoon/night.</div>
-            <div class="phrase-ja">おはよう/こんにちは/おやすみなさい。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">5. How are you today?</div>
-            <div class="phrase-ja">今日の調子はいかがですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">6. I'm fine, thank you.</div>
-            <div class="phrase-ja">元気です、ありがとう。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">7. The dinner was delicious!</div>
-            <div class="phrase-ja">夕食は美味しかったです！</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">8. I really enjoyed today.</div>
-            <div class="phrase-ja">今日は本当に楽しかったです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">9. See you tomorrow.</div>
-            <div class="phrase-ja">また明日ね。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">10. I appreciate your help.</div>
-            <div class="phrase-ja">手伝ってくれて感謝します。</div>
-        </div>
-        
-        <h3>2. 質問する (15フレーズ)</h3>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">11. What is your name?</div>
-            <div class="phrase-ja">お名前は何ですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">12. What is your favorite food?</div>
-            <div class="phrase-ja">好きな食べ物は何ですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">13. Do you have any pets?</div>
-            <div class="phrase-ja">ペットを飼っていますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">14. Could you tell me about your family?</div>
-            <div class="phrase-ja">家族について教えてもらえますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">15. What do you like to do in your free time?</div>
-            <div class="phrase-ja">暇な時は何をしますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">16. What is your favorite Japanese food/place?</div>
-            <div class="phrase-ja">好きな日本の食べ物・場所は何ですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">17. Where is the bathroom/toilet?</div>
-            <div class="phrase-ja">トイレはどこですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">18. What time should I wake up?</div>
-            <div class="phrase-ja">何時に起きるべきですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">19. Can I help you with this?</div>
-            <div class="phrase-ja">手伝いましょうか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">20. Can I use my phone now?</div>
-            <div class="phrase-ja">今、携帯を使ってもいいですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">21. Is it okay if I sit here?</div>
-            <div class="phrase-ja">ここに座っても大丈夫ですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">22. What is this called in English?</div>
-            <div class="phrase-ja">これは英語で何と言いますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">23. Do you like living here?</div>
-            <div class="phrase-ja">ここに住むのは好きですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">24. How long have you lived here?</div>
-            <div class="phrase-ja">ここにどのくらい住んでいますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">25. Is it far from here?</div>
-            <div class="phrase-ja">ここから遠いですか？</div>
-        </div>
-        
-        <h3>3. 意思を伝える (15フレーズ)</h3>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">26. I am a junior high school student from Kyoto.</div>
-            <div class="phrase-ja">京都から来た中学生です。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">27. I like [Hobby] very much.</div>
-            <div class="phrase-ja">～がとても好きです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">28. I want to try [Activity].</div>
-            <div class="phrase-ja">～を試してみたいです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">29. I need to do my homework.</div>
-            <div class="phrase-ja">宿題をする必要があります。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">30. I'm going to sleep now.</div>
-            <div class="phrase-ja">もう寝ます。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">31. I'm going outside.</div>
-            <div class="phrase-ja">外に出てきます。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">32. I'm hungry/thirsty.</div>
-            <div class="phrase-ja">お腹が空きました・喉が渇きました。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">33. It is cold/hot today.</div>
-            <div class="phrase-ja">今日は寒い・暑いです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">34. Yes, please.</div>
-            <div class="phrase-ja">はい、お願いします。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">35. No, thank you.</div>
-            <div class="phrase-ja">いいえ、結構です。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">36. I'm learning English.</div>
-            <div class="phrase-ja">英語を勉強中です。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">37. I enjoyed playing sports.</div>
-            <div class="phrase-ja">スポーツをして楽しかったです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">38. This food is very good.</div>
-            <div class="phrase-ja">この料理はとても美味しいです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">39. I have a little homework.</div>
-            <div class="phrase-ja">少し宿題があります。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">40. I feel much better now.</div>
-            <div class="phrase-ja">気分がずっと良くなりました。</div>
-        </div>
-        
-        <h3>4. 困った時・確認 (10フレーズ)</h3>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">41. Could you say that again, please?</div>
-            <div class="phrase-ja">もう一度言っていただけますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">42. Could you speak slowly?</div>
-            <div class="phrase-ja">ゆっくり話していただけますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">43. I don't understand.</div>
-            <div class="phrase-ja">分かりません。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">44. What does this word mean?</div>
-            <div class="phrase-ja">この単語はどういう意味ですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">45. I have a headache/stomachache.</div>
-            <div class="phrase-ja">頭・お腹が痛いです。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">46. Is this right?</div>
-            <div class="phrase-ja">これで合っていますか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">47. I am sorry, I am late.</div>
-            <div class="phrase-ja">遅れてごめんなさい。</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">48. Where should I put my shoes?</div>
-            <div class="phrase-ja">靴はどこに置くべきですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">49. Excuse me, where is the station?</div>
-            <div class="phrase-ja">すみません、駅はどこですか？</div>
-        </div>
-        
-        <div class="phrase-card">
-            <div class="phrase-en">50. Thank you for your patience.</div>
-            <div class="phrase-ja">辛抱強く待ってくれてありがとう。</div>
-        </div>
-    </div>
-    
-    <div class="section" id="checklist">
-        <h2>✅ 最終出発前チェックリスト</h2>
-        
-        <div class="info-box">
-            必要なものを確認して、忘れ物のないようにしましょう
-        </div>
-        
-        <h3>📚 書類・貴重品</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span><strong>パスポート</strong></span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>搭乗券</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>Visit Japan Web QRコード</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>携行品・別送品申告書</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>研修旅行のしおり</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>財布（現金・カード入れ）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>現地通貨（オーストラリアドル）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>Revolutジュニアカード</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>海外旅行保険証</span>
-            </li>
-        </ul>
-        
-        <h3>📱 電子機器</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>スマホ・カメラ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>充電器・変換プラグ（Oタイプ）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>3-in-1ケーブル</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>USB-C to Cケーブル</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>Type-Aポート付タップケーブル</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ワイヤレスイヤホン（AirPodsなど）</span>
-            </li>
-        </ul>
-        
-        <h3>👗 衣類</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>制服</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>体操服</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>私服（5日分）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>下着・靴下（日数分）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>パジャマ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>羽織るもの（寒暖差対策）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>生理用品（使い慣れたもの）</span>
-            </li>
-        </ul>
-        
-        <h3>🧴 衛生・ケア用品</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>歯磨きセット</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>スキンケア用品（化粧水・乳液など）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>洗顔料</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>シャンプー・リンス・ボディソープ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ヘアアイロン（コード式推奨）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ヘアブラシ・ヘアゴム・ピン</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>日焼け止め・帽子</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>リップクリーム</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>虫除け・かゆみ止め</span>
-            </li>
-        </ul>
-        
-        <h3>💊 常備薬・その他</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>酔い止め薬</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>腹痛薬</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>頭痛薬</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>絆創膏</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>筆記用具・メモ帳</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>小さなショルダーバッグ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>エコバッグ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>速乾タオル</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ハンカチ・ティッシュ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ウェットティッシュ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ビニール袋（数枚）</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>携帯用洗濯洗剤</span>
-            </li>
-        </ul>
-        
-        <h3>✈️ 機内快適グッズ</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ネックピロー</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>アイマスク・耳栓</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>使い捨てスリッパ</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>のど飴・ガム</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>空の水筒</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>保湿用マスク</span>
-            </li>
-        </ul>
-        
-        <h3>🎁 その他</h3>
-        <ul class="checklist">
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>ホストファミリーへのお土産</span>
-            </li>
-            <li class="checklist-item">
-                <input type="checkbox">
-                <span>日本文化紹介グッズ（折り紙など）</span>
-            </li>
-        </ul>
-        
-        <div class="emergency" style="margin-top: 30px;">
-            📞 緊急連絡先<br>
-            株式会社JTB 京都中央支店<br>
-            TEL: 075-284-0172
-        </div>
-        
-        <div class="info-box" style="margin-top: 20px; text-align: center;">
-            楽しい研修旅行になりますように<br>
-            気をつけて行ってらっしゃい
-        </div>
     </div>
 </div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>🏫 4日目: 10月20日(月) - 現地校交流 (Pimpama/Pacific Pines)</h2>
+    <table>
+        <tr>
+            <th>時刻</th>
+            <th>行先/場所</th>
+            <th>内容</th>
+            <th>交通機関</th>
+            <th>食事</th>
+        </tr>
+        <tr>
+            <td>08:00~08:30</td>
+            <td>現地校着</td>
+            <td>各ホームステイ先から登校 (ホストファミリーの送迎)。</td>
+            <td>ホスト送迎</td>
+            <td>朝: 各家庭</td>
+        </tr>
+        <tr>
+            <td>終日</td>
+            <td>Pimpama State School / Pacific Pines State School</td>
+            <td>ウェルカムセレモニー (スピーチ: 清水・津田/市場・美濃)、バディとの対面・交流、文教生だけの英語授業、授業参加やスポーツ交流など。</td>
+            <td></td>
+            <td>昼: パックランチ<br>夕: 各家庭</td>
+        </tr>
+        <tr>
+            <td>15:00</td>
+            <td>現地校発</td>
+            <td>ホストファミリーの送迎で帰宅。</td>
+            <td>ホスト送迎</td>
+            <td></td>
+        </tr>
+    </table>
+    <h3>✅ 4日目に必要なもの(特に重要なもの)</h3>
+    <ul>
+        <li>🎓 <strong>制服</strong></li>
+        <li>🔐 <strong>貴重品</strong>(パスポート・スマホ・カメラ等)は<strong>スーツケースに入れて鍵をかけておく</strong>。</li>
+        <li>👥 <strong>バディとの交流のための話題</strong></li>
+        <li>🍱 <strong>パックランチ</strong>(ホストファミリーが用意)をなくさないように注意。</li>
+    </ul>
+
+    <div class="tips-box">
+        <h3>🏫 4日目に役立つ!バディと仲良くなる会話TIPS</h3>
+        <ul>
+            <li>
+                <strong>1.バディへの最初のあいさつ</strong><br>
+                これから一日お世話になる相手です。笑顔で元気に!
+                <span class="english-phrase">"Hi! I'm Rio. I'm your buddy today. Nice to meet you!"</span>
+                <span class="japanese-translation">(こんにちは!りおです。今日あなたのバディです。よろしくね!)</span>
+            </li>
+            <li>
+                <strong>2.共通の話題を見つける(好きな科目)</strong><br>
+                学校生活のことから話してみましょう。
+                <span class="english-phrase">"What is your favorite subject?"</span>
+                <span class="japanese-translation">(一番好きな科目は何ですか?)</span>
+            </li>
+            <li>
+                <strong>3.共通の話題を見つける(趣味)</strong><br>
+                好きなことの話は盛り上がります。
+                <span class="english-phrase">"What do you do after school or on weekends?"</span>
+                <span class="japanese-translation">(放課後や週末は何をしていますか?)</span>
+            </li>
+            <li>
+                <strong>4.写真を見せて話す</strong><br>
+                言葉に詰まったら、スマホの写真を見せながら話すのがおすすめです。「This is my cat.」「This is my school in Japan.」など。
+                <span class="english-phrase">"Would you like to see a picture of my pet?"</span>
+                <span class="japanese-translation">(私のペットの写真、見る?)</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>👋 5日目: 10月21日(火) - 現地校交流、フェアウェルセレモニー</h2>
+    <table>
+        <tr>
+            <th>時刻</th>
+            <th>行先/場所</th>
+            <th>内容</th>
+            <th>交通機関</th>
+            <th>食事</th>
+        </tr>
+        <tr>
+            <td>08:00~08:30</td>
+            <td>現地校着</td>
+            <td>各ホームステイ先から登校 (ホストファミリーの送迎)。</td>
+            <td>ホスト送迎</td>
+            <td>朝: 各家庭</td>
+        </tr>
+        <tr>
+            <td>終日</td>
+            <td>Pimpama State School / Pacific Pines State School</td>
+            <td>文教生による日本文化の紹介・交流、現地校との交流、フェアウェルセレモニー (スピーチ: 寺田・竹川・八陳/高木・松田・稲岡)。</td>
+            <td></td>
+            <td>昼: パックランチ<br>夕: 各家庭</td>
+        </tr>
+        <tr>
+            <td>15:00</td>
+            <td>現地校発</td>
+            <td>ホストファミリーの送迎で帰宅。帰国の準備をする。</td>
+            <td>ホスト送迎</td>
+            <td></td>
+        </tr>
+    </table>
+    <h3>✅ 5日目に必要なもの(特に重要なもの)</h3>
+    <ul>
+        <li>🎓 <strong>制服か体操服</strong> (20日に指示された方)</li>
+        <li>🎎 <strong>日本文化紹介のための準備物</strong></li>
+        <li>📱 <strong>スマホ</strong> (フェアウェルセレモニーの時のみ写真撮影可)</li>
+        <li>🧳 <strong>帰国準備</strong>: <strong>スーツケース</strong>(20kg以内×1個)と<strong>手荷物</strong>(パスポート、貴重品等)を分ける。</li>
+    </ul>
+
+    <div class="tips-box">
+        <h3>👋 5日目に役立つ!感謝を伝え、文化を紹介する会話TIPS</h3>
+        <ul>
+            <li>
+                <strong>1.日本文化を紹介するとき</strong><br>
+                簡単な言葉で、何をするのかを伝えてみましょう。
+                <span class="english-phrase">"I'd like to show you Origami. It is Japanese paper art."</span>
+                <span class="japanese-translation">(折り紙を紹介します。日本の紙のアートです。)</span>
+            </li>
+            <li>
+                <strong>2.連絡先を交換したいとき</strong><br>
+                友達になった記念に、勇気を出して聞いてみましょう。
+                <span class="english-phrase">"Can we exchange Instagram accounts? I want to keep in touch."</span>
+                <span class="japanese-translation">(インスタ交換しない?これからも連絡とりたいな。)</span>
+            </li>
+            <li>
+                <strong>3.バディへのお別れのあいさつ</strong><br>
+                一日の終わりに、感謝の気持ちをしっかり伝えましょう。
+                <span class="english-phrase">"Thank you for everything today. I had a great time with you!"</span>
+                <span class="japanese-translation">(今日は一日ありがとう。すごく楽しかったよ!)</span>
+            </li>
+            <li>
+                <strong>4.最後の夜、ホストファミリーへ</strong><br>
+                お世話になった感謝を手紙や言葉で伝えましょう。
+                <span class="english-phrase">"Thank you for the wonderful time. I will miss you."</span>
+                <span class="japanese-translation">(素晴らしい時間をありがとうございました。寂しくなります。)</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>🛬 6日目: 10月22日(水) - ブリスベン発、帰国</h2>
+    <table>
+        <tr>
+            <th>時刻</th>
+            <th>行先/場所</th>
+            <th>内容</th>
+            <th>交通機関</th>
+            <th>食事</th>
+        </tr>
+        <tr>
+            <td>07:00/07:40発</td>
+            <td>各現地校発</td>
+            <td>ホストファミリーの送迎で学校に集合しバスにて空港へ。(※各家庭でトイレに行っておくこと)</td>
+            <td><span class="icon">🚌</span> 専用バス</td>
+            <td>朝: 各家庭</td>
+        </tr>
+        <tr>
+            <td>08:40着</td>
+            <td><a href="https://www.bne.com.au/" target="_blank" rel="noopener noreferrer">ブリスベン空港 (BNE)</a></td>
+            <td>チェックイン、保安検査、出国審査。</td>
+            <td></td>
+            <td rowspan="4">昼: 機内<br>夕: 機内</td>
+        </tr>
+        <tr>
+            <td>11:40発</td>
+            <td>ブリスベン空港 → 関西空港</td>
+            <td>空路、関西空港へ。機内食は昼食・軽食の2回。</td>
+            <td><span class="icon">✈️</span> <a href="https://www.jetstar.com/jp/ja/home" target="_blank" rel="noopener noreferrer">JQ23便</a></td>
+        </tr>
+        <tr>
+            <td>19:40着</td>
+            <td><a href="https://www.kansai-airport.or.jp/" target="_blank" rel="noopener noreferrer">関西国際空港 (KIX)</a></td>
+            <td>入国審査、荷物受け取り、税関申告。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20:40発</td>
+            <td>関西国際空港 → 京都駅</td>
+            <td>貸切バスにて京都駅へ。(利用バス会社: 関西中央交通 TEL: 072-490-3670)</td>
+            <td><span class="icon">🚌</span> 貸切バス</td>
+        </tr>
+        <tr>
+            <td>22:10着</td>
+            <td>京都駅八条口 (アバンティ前バス停)</td>
+            <td>到着後、解散。希望者はシャトルタクシーにてご自宅へ (別途費用要)。</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h3>✅ 6日目に必要なもの(特に重要なもの)</h3>
+    <ul>
+        <li>📘 <strong>パスポート</strong>・🎫 <strong>搭乗券</strong> (最後まで携帯)</li>
+        <li>📄 <strong>携行品・別送品申告書</strong> (機内で記入を済ませておく)</li>
+        <li>📱 <strong>帰国時の<a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong></li>
+        <li>💊 <strong>酔い止め薬</strong> (搭乗前に飲んでおく)</li>
+        <li>👕 <strong>私服</strong></li>
+    </ul>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h1 id="tips">📝 研修旅行で役立つ英会話50選 & 決済方法</h1>
+    <p>ホストファミリーやバディとの交流に役立つ、簡単な日常会話フレーズ集です。</p>
+
+    <div class="finance-box">
+        <h2>💳 決済方法の使い分けアドバイス</h2>
+        <p>現金と<a href="https://www.revolut.com/ja-JP/" target="_blank" rel="noopener noreferrer">Revolut</a>ジュニアカードを持参することを前提としています。</p>
+        <ul>
+            <li><strong>💵 現金</strong>: ホストファミリーへのお礼、チップ(必要な場合)、自動販売機、小さな個人商店など、カードが使えない可能性のある場所で利用します。</li>
+            <li><strong>💳 Revolutカード</strong>: 緊急時の予備費、お土産店、スーパーマーケットなど、カード決済対応の場所で利用します。多額の現金を一度に持ち歩かないように注意しましょう。</li>
+        </ul>
+        <span class="inferred-note">💡【追記アドバイス】両替は事前に済ませ、少額紙幣を多めに持たせておくと便利です。</span>
+    </div>
+
+    <h2>💬 1. 挨拶・感謝 (Greetings & Thanks) [10フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">1. 👋 Hello. I'm <strong>Rio</strong>. (こんにちは。<strong>りお</strong>です。)</div>
+        <div class="phrase-item">2. 🙏 Thank you for having me. (泊めてくれてありがとう。)</div>
+        <div class="phrase-item">3. 😊 It's great to be here. (ここに来られて嬉しいです。)</div>
+        <div class="phrase-item">4. 🌅 Good morning/afternoon/night. (おはよう/こんにちは/おやすみなさい。)</div>
+        <div class="phrase-item">5. 😃 How are you today? (今日の調子はいかがですか?)</div>
+        <div class="phrase-item">6. ✨ I'm fine, thank you. (元気です、ありがとう。)</div>
+        <div class="phrase-item">7. 🍽️ The dinner was delicious! (夕食は美味しかったです!)</div>
+        <div class="phrase-item">8. 🎉 I really enjoyed today. (今日は本当に楽しかったです。)</div>
+        <div class="phrase-item">9. 👋 See you tomorrow. (また明日ね。)</div>
+        <div class="phrase-item">10. 💝 I appreciate your help. (手伝ってくれて感謝します。)</div>
+    </div>
+    
+    <h2>❓ 2. 質問する (Asking Questions) [15フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">11. 👤 What is your name? (お名前は何ですか?)</div>
+        <div class="phrase-item">12. 🍕 What is your favorite food? (好きな食べ物は何ですか?)</div>
+        <div class="phrase-item">13. 🐕 Do you have any pets? (何かペットを飼っていますか?)</div>
+        <div class="phrase-item">14. 👨‍👩‍👧‍👦 Could you tell me about your family? (ご家族について教えてもらえますか?)</div>
+        <div class="phrase-item">15. 🎮 What do you like to do in your free time? (暇な時は何をしますか?)</div>
+        <div class="phrase-item">16. 🗾 What is your favorite Japanese food/place? (好きな日本の食べ物/場所は何ですか?)</div>
+        <div class="phrase-item">17. 🚽 Where is the bathroom/toilet? (お風呂/トイレはどこですか?)</div>
+        <div class="phrase-item">18. ⏰ What time should I wake up? (何時に起きるべきですか?)</div>
+        <div class="phrase-item">19. 🤝 Can I help you with [chore]? (手伝いましょうか?)</div>
+        <div class="phrase-item">20. 📱 Can I use my phone now? (今、携帯を使ってもいいですか?)</div>
+        <div class="phrase-item">21. 💺 Is it okay if I sit here? (ここに座っても大丈夫ですか?)</div>
+        <div class="phrase-item">22. 🔤 What is this called in English? (これは英語で何と言いますか?)</div>
+        <div class="phrase-item">23. 🏡 Do you like living here? (ここに住むのは好きですか?)</div>
+        <div class="phrase-item">24. 📅 How long have you lived here? (ここにどのくらい住んでいますか?)</div>
+        <div class="phrase-item">25. 🚶 Is it far from here? (ここから遠いですか?)</div>
+    </div>
+
+    <h2>💭 3. 意思を伝える (Expressing Needs/Self) [15フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">26. 🎓 I am a junior high school student from Kyoto. (京都から来た中学生です。)</div>
+        <div class="phrase-item">27. ❤️ I like [Hobby] very much. (~がとても好きです。)</div>
+        <div class="phrase-item">28. 🌟 I want to try [Activity]. (~を試してみたいです。)</div>
+        <div class="phrase-item">29. 📝 I need to [verb]... (~をする必要があります...)</div>
+        <div class="phrase-item">30. 😴 I'm going to sleep now. (もう寝ます。)</div>
+        <div class="phrase-item">31. 🚶 I'm going outside. (外に出てきます。)</div>
+        <div class="phrase-item">32. 🍔 I'm hungry/thirsty. (お腹が空きました/喉が渇きました。)</div>
+        <div class="phrase-item">33. 🌡️ It is cold/hot today. (今日は寒い/暑いです。)</div>
+        <div class="phrase-item">34. ✅ Yes, please. (はい、お願いします。)</div>
+        <div class="phrase-item">35. 🙅 No, thank you. (いいえ、結構です。)</div>
+        <div class="phrase-item">36. 📚 I'm learning English. (英語を勉強中です。)</div>
+        <div class="phrase-item">37. ⚽ I enjoyed playing [Sport]. (~をして楽しかったです。)</div>
+        <div class="phrase-item">38. 😋 This [food] is very good. (この~はとても美味しいです。)</div>
+        <div class="phrase-item">39. ✏️ I have a little homework. (少し宿題があります。)</div>
+        <div class="phrase-item">40. 💪 I feel much better now. (気分がずっと良くなりました。)</div>
+    </div>
+
+    <h2>❗ 4. 困った時・確認 (Trouble & Confirmation) [10フレーズ]</h2>
+    <div class="phrase-list">
+        <div class="phrase-item">41. 🔄 Could you say that again, please? (もう一度言っていただけますか?)</div>
+        <div class="phrase-item">42. 🐢 Could you speak slowly? (ゆっくり話していただけますか?)</div>
+        <div class="phrase-item">43. ❓ I don't understand. (分かりません。)</div>
+        <div class="phrase-item">44. 🤔 What does [word] mean? (~はどういう意味ですか?)</div>
+        <div class="phrase-item">45. 🤕 I have a headache/stomachache. (頭/お腹が痛いです。)</div>
+        <div class="phrase-item">46. ✔️ Is this right? (これで合っていますか?)</div>
+        <div class="phrase-item">47. 🙇 I am sorry, I am late. (遅れてごめんなさい。)</div>
+        <div class="phrase-item">48. 👞 Where should I put my shoes? (靴はどこに置くべきですか?)</div>
+        <div class="phrase-item">49. 📍 Excuse me, where is [place]? (すみません、~はどこですか?)</div>
+        <div class="phrase-item">50. ⏳ Thank you for your patience. (辛抱強く待ってくれてありがとう。)</div>
+    </div>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h2>✅ 最終出発前チェックリスト</h2>
+    <p>最終確認を行い、忘れ物のないよう準備しましょう。</p>
+
+    <h3>📚 書類・身の回り品</h3>
+    <div style="column-count: 2; column-gap: 30px;">
+        <div class="checklist-item"><input type="checkbox"> 📘 <strong>パスポート</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🎫 <strong>搭乗券</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 📱 <strong><a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 📄 <strong>携行品・別送品申告書</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 📋 研修旅行のしおり</div>
+        <div class="checklist-item"><input type="checkbox"> 💳 <strong>財布(現金・カード入れ)</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 💵 <strong>現地通貨</strong> (オーストラリアドル)</div>
+        <div class="checklist-item"><input type="checkbox"> 💳 <strong><a href="https://www.revolut.com/ja-JP/" target="_blank" rel="noopener noreferrer">Revolut</a>ジュニアカード</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🏥 <strong>海外旅行保険証</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 💊 <strong>常備薬</strong>(酔い止め、腹痛薬など)</div>
+        <div class="checklist-item"><input type="checkbox"> 📱 スマホ/カメラ (手荷物へ)</div>
+        <div class="checklist-item"><input type="checkbox"> 🔌 充電器/変換プラグ (<a href="https://www.power-plugs-sockets.com/australia/" target="_blank" rel="noopener noreferrer">Oタイプ</a>)</div>
+        <div class="checklist-item"><input type="checkbox"> 🔌 <strong>スマホ用3-in-1ケーブル</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🔌 <strong>USB-C to Cケーブル</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🔌 <strong>Type-Aポート付タップケーブル</strong></div>
+        <div class="checklist-item"><input type="checkbox"> ✏️ <strong>筆記用具</strong> (機内で書類記入に必須)</div>
+        <div class="checklist-item"><input type="checkbox"> 👜 <strong>小さなショルダーバッグ</strong> <span class="inferred-note">💡【追記】毎日持ち歩く用に便利</span></div>
+        <div class="checklist-item"><input type="checkbox"> 🛍️ <strong>エコバッグ</strong> <span class="inferred-note">💡【追記】お土産や買い物に</span></div>
+    </div>
+
+    <h3>👗 衣類・身だしなみ</h3>
+    <div style="column-count: 2; column-gap: 30px;">
+        <div class="checklist-item"><input type="checkbox"> 🎓 <strong>制服</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🤸 <strong>体操服</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 👕 私服(5日分)</div>
+        <div class="checklist-item"><input type="checkbox"> 👙 下着・靴下 (日数分)</div>
+        <div class="checklist-item"><input type="checkbox"> 🛏️ パジャマ</div>
+        <div class="checklist-item"><input type="checkbox"> 🧥 羽織るもの (寒暖差対策)</div>
+        <div class="checklist-item"><input type="checkbox"> 🩸 <strong>生理用品</strong> <span class="inferred-note">💡【追記】使い慣れたものを日数分+α</span></div>
+        <div class="checklist-item"><input type="checkbox"> 🏊 <strong>速乾タオル</strong> (スポーツタオル等) <span class="inferred-note">💡【追記】バスタオルはかさばらないものを</span></div>
+        <div class="checklist-item"><input type="checkbox"> 🧻 ハンカチ、ポケットティッシュ</div>
+        <div class="checklist-item"><input type="checkbox"> 💧 ウェットティッシュ</div>
+        <div class="checklist-item"><input type="checkbox"> 🛍️ ビニール袋 (数枚) <span class="inferred-note">💡【追記】汚れ物やゴミ入れに</span></div>
+        <div class="checklist-item"><input type="checkbox"> 🧴 携帯用洗濯洗剤 <span class="inferred-note">💡【追記】下着など簡単な洗濯に</span></div>
+    </div>
+    
+    <h3>💄 衛生・ケア用品 (液体物は100ml以下の容器で手荷物に)</h3>
+    <div style="column-count: 2; column-gap: 30px;">
+        <div class="checklist-item"><input type="checkbox"> 🪥 歯磨きセット</div>
+        <div class="checklist-item"><input type="checkbox"> 💧 スキンケア用品 (化粧水・乳液など)</div>
+        <div class="checklist-item"><input type="checkbox"> 🧴 洗顔料</div>
+        <div class="checklist-item"><input type="checkbox"> 🧴 シャンプー・リンス、ボディソープ</div>
+        <div class="checklist-item"><input type="checkbox"> 💇 <strong>ヘアアイロン</strong> (コード式推奨)</div>
+        <div class="checklist-item"><input type="checkbox"> 💇 ヘアブラシ、ヘアゴム・ピン</div>
+        <div class="checklist-item"><input type="checkbox"> ☀️ 日焼け止め、帽子</div>
+        <div class="checklist-item"><input type="checkbox"> 💄 リップクリーム</div>
+        <div class="checklist-item"><input type="checkbox"> 🦟 虫除け、かゆみ止め</div>
+        <div class="checklist-item"><input type="checkbox"> ✂️ 爪切り、綿棒</div>
+    </div>
+
+    <h3>✈️ 機内での快適グッズ(手荷物へ)</h3>
+    <div style="column-count: 2; column-gap: 30px;">
+        <div class="checklist-item"><input type="checkbox"> 🛏️ <strong>ネックピロー</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 😴 <strong>アイマスク、耳栓</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🥿 使い捨てスリッパ</div>
+        <div class="checklist-item"><input type="checkbox"> 🍬 <strong>のど飴、ガム</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🧃 <strong>空の水筒</strong> (検査後に水を補充)</div>
+        <div class="checklist-item"><input type="checkbox"> 😷 <strong>保湿用マスク</strong></div>
+        <div class="checklist-item"><input type="checkbox"> 🎧 <strong>ワイヤレスイヤホン (AirPodsなど)</strong><span class="inferred-note">💡【追記】充電ケースも忘れずに。貴重品なので管理に注意。</span></div>
+    </div>
+
+    <hr>
+    <h3>📌 ホームステイ最終確認</h3>
+    <div style="column-count: 2; column-gap: 30px;">
+        <div class="checklist-item"><input type="checkbox"> 💬 ホストファミリーへのお礼の言葉を練習した</div>
+        <div class="checklist-item"><input type="checkbox"> 🎎 日本文化紹介の準備をした</div>
+    </div>
+    <div class="notes" style="margin-top: 20px;">
+        <strong>📞 旅行会社連絡先:</strong> <a href="https://branch.jtbbwt.com/j6741-0" target="_blank" rel="noopener noreferrer">株式会社JTB 京都中央支店</a> TEL: 075 (284) 0172
+    </div>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h1 id="final_tips">🛡️ 安全と心得・最終アドバイス</h1>
+    <p>このページは、万が一の時にあなたを守り、ホームステイをさらに楽しく、有意義にするための最後のアドバイスです。出発前にもう一度、お父さんやお母さんと一緒に読んでおきましょう。</p>
+
+    <h2>🆘 緊急時の対応と連絡先</h2>
+    <p>困ったことが起きたら、まずは落ち着いて、すぐに周りの大人に相談しましょう。決して一人で抱え込まないでください。</p>
+    
+    <table class="emergency-contacts">
+        <tr>
+            <th>状況</th>
+            <th>まず誰に連絡する?</th>
+            <th>連絡先・対応方法</th>
+        </tr>
+        <tr>
+            <td><strong>🤒 体調が悪い、ケガをした</strong></td>
+            <td>ホストファミリー、または引率の先生</td>
+            <td>すぐに症状を伝えてください。海外旅行保険証を準備し、必要であれば保険会社のサポートデスクに電話します。</td>
+        </tr>
+        <tr>
+            <td><strong>📘 パスポートをなくした</strong></td>
+            <td>引率の先生、ホストファミリー</td>
+            <td>すぐに報告してください。その後、警察に紛失届を出し、在ブリスベン日本国総領事館で手続きが必要です。</td>
+        </tr>
+        <tr>
+            <td><strong>👜 持ち物をなくした・盗まれた</strong></td>
+            <td>ホストファミリー、引率の先生</td>
+            <td>どこでなくしたか、状況を説明してください。クレジットカードやRevolutカードをなくした場合は、すぐにアプリや電話で利用停止の手続きをします。</td>
+        </tr>
+        <tr>
+            <td><strong>🚨 事件・事故にあった</strong></td>
+            <td>すぐに安全な場所に避難し、引率の先生、ホストファミリーへ連絡</td>
+            <td><strong>警察・消防・救急</strong>の緊急連絡先は、「<strong>000</strong>」(トリプルゼロ)です。</td>
+        </tr>
+    </table>
+    
+    <div class="notes" style="margin-top: 20px;">
+        <strong>📞【重要連絡先リスト】</strong><br>
+        <ul>
+            <li><strong>🏛️ 在ブリスベン日本国総領事館:</strong> +61-7-3221-5188 (一般的なお問い合わせ)</li>
+            <li><strong>🏥 海外旅行保険会社サポートデスク:</strong> [保険証券に記載の番号をここに記入]</li>
+            <li><strong>👨‍🏫 引率の先生の連絡先:</strong> [事前に確認してここに記入]</li>
+        </ul>
+    </div>
+
+    <h2>🤝 ホームステイ成功の秘訣</h2>
+    <p>短い期間でも、ホストファミリーはあなたの「オーストラリアの家族」です。以下のことを心がけると、もっと仲良くなれます。</p>
+    <ul>
+        <li><strong>🙏 "Please" と "Thank you" をたくさん言う:</strong> 何かをお願いする時は "Please"、何かをしてもらったらすぐに "Thank you" を笑顔で伝えましょう。感謝の気持ちが一番大切です。</li>
+        <li><strong>💬 積極的にコミュニケーションをとる:</strong> 英語がうまく話せなくても問題ありません。「今日の学校はどうだった?」と聞かれたら、単語だけでも良いので、何があったか伝えてみましょう。写真を見せるのも良い方法です。</li>
+        <li><strong>🤲 お手伝いを申し出る:</strong> "Can I help you?" (何かお手伝いしましょうか?) と聞いてみましょう。食事の準備や後片付けなど、自分にできることを見つけて行動すると喜ばれます。</li>
+        <li><strong>📋 家のルールを尊重する:</strong> シャワーの時間、食事の時間、門限など、家庭ごとのルールがあります。最初に確認し、きちんと守りましょう。</li>
+        <li><strong>🎌 日本のことを話せるようにしておく:</strong> 自分の住んでいる街のこと、学校生活のこと、好きなアニメや食べ物のことなど、簡単な英語で説明できるよう準備しておくと会話が弾みます。</li>
+    </ul>
+
+    <h2>💡 知っておくと役立つこと</h2>
+    <ul>
+        <li><strong>☀️ 日差しと紫外線:</strong> オーストラリアの日差しは非常に強いです。外出時は帽子をかぶり、日焼け止めをこまめに塗り直しましょう。</li>
+        <li><strong>💧 水について:</strong> 水道水は飲めますが、心配な場合はミネラルウォーターを買いましょう。</li>
+        <li><strong>👋 挨拶:</strong> お店に入るときや、バスの運転手さんに対してなど、気軽に "Hello" や "Thank you" と声をかける習慣があります。ぜひ真似してみてください。</li>
+    </ul>
+
+    <div class="finance-box" style="text-align: center; padding: 25px; margin-top: 35px; background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); border: 4px solid #004d40;">
+        <h3 style="margin-top:0; color: #004d40; font-size: 1.3em;">🌟 最後に</h3>
+        <p style="font-size: 1.15em; line-height: 1.8;">
+            <strong>失敗を恐れず、たくさんのことにチャレンジしてきてください!</strong><br>
+            この旅は、きっとあなたを大きく成長させてくれます。<br>
+            最高の思い出を作って、元気に帰ってくるのを楽しみにしています。
+        </p>
+        <p style="margin-top: 20px; font-size: 1.1em; color: #00796b;">
+            ✈️ <strong>Have a wonderful trip!</strong> ✈️
+        </p>
+    </div>
+</div>
+
 </body>
 </html>
