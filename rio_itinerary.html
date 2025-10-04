@@ -10,7 +10,9 @@
             margin: 0;
             padding: 0;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 14px; /* フォントサイズを縮小 */
+            counter-reset: page; /* ページカウンターを初期化 */
         }
         .page {
             page-break-after: always;
@@ -22,31 +24,36 @@
         .page:last-child {
             page-break-after: avoid;
         }
+        .overview-section {
+            padding: 20mm;
+        }
         h1 {
             text-align: center;
             color: #004d40;
             border-bottom: 3px solid #004d40;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
+            font-size: 1.8em; /* サイズ調整 */
         }
         h2 {
             color: #00796b;
             border-left: 5px solid #00796b;
             padding-left: 10px;
-            margin-top: 25px;
+            margin-top: 20px; /* 余白縮小 */
+            font-size: 1.4em; /* サイズ調整 */
         }
         h3 {
             color: #4db6ac;
-            margin-top: 15px;
-            font-size: 1.1em;
+            margin-top: 12px; /* 余白縮小 */
+            font-size: 1.1em; /* サイズ調整 */
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin-top: 10px; /* 余白縮小 */
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 6px; /* パディング縮小 */
             text-align: left;
             vertical-align: top;
         }
@@ -72,13 +79,13 @@
         .checklist-item {
             display: flex;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 5px; /* 余白縮小 */
         }
         .checklist-item input[type="checkbox"] {
             margin-right: 10px;
-            transform: scale(1.5);
+            transform: scale(1.3);
         }
-        .page::after {
+        .page::after, .overview-section::after {
             content: "ページ " counter(page);
             position: absolute;
             bottom: 10mm;
@@ -98,7 +105,7 @@
             column-gap: 30px;
         }
         .phrase-item {
-            margin-bottom: 10px;
+            margin-bottom: 8px; /* 余白縮小 */
             break-inside: avoid-column;
         }
         .finance-box {
@@ -112,12 +119,47 @@
             margin-right: 5px;
             font-size: 1.2em;
         }
+        .overview-table th {
+             width: auto;
+        }
+        .page-nav {
+            text-align: right;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+        .page-nav a {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #e0f2f1;
+            border-radius: 5px;
+            color: #004d40;
+            font-weight: bold;
+        }
+        .page-nav a:hover {
+            background-color: #b2dfdb;
+            text-decoration: none;
+        }
+        @media print {
+            .page-nav {
+                display: none;
+            }
+            .overview-section {
+                page-break-after: always; /* 概要セクションの後に改ページ */
+            }
+            .phrase-list {
+                column-count: 1; /* ★印刷時は英会話集を1カラムにする */
+            }
+        }
     </style>
 </head>
-<body>
+<body id="top">
 
-<div class="page">
-    <h1><a href="https://school.hs-kbu.jp/junior-jhs/" target="_blank" rel="noopener noreferrer">京都文教中学校</a> 2025年度 海外研修旅行 旅程表</h1>
+<div class="overview-section">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h1 id="itinerary"><a href="https://school.hs-kbu.jp/junior-jhs/" target="_blank" rel="noopener noreferrer">京都文教中学校</a> 2025年度 海外研修旅行 旅程表</h1>
     <h2>🇦🇺 オーストラリア方面 6日間 (ホームステイ含む)</h2>
     <p><strong>旅行期間:</strong> 2025年10月17日(金) ～ 2025年10月22日(水)</p>
     <p><strong>旅行方面:</strong> オーストラリア 方面 (ブリスベン、ゴールドコースト近郊)</p>
@@ -129,13 +171,56 @@
         <ul>
             <li>航空会社のフライトスケジュールは変更となる場合がございます。</li>
             <li>ご旅程は運輸機関のダイヤ改正及び各地の道路状況により多少時間が変更になる場合がございます。</li>
-            <li><strong>LCC（格安航空会社）</strong>であるジェットスター航空を利用します。
-                <span class="inferred-note">💡【追記アドバイス】会社の規定ではLCC利用不可とのことですが、本研修旅行では利用する点にご留意ください。</span>
-            </li>
+            <li><strong>LCC（格安航空会社）</strong>であるジェットスター航空を利用します。<span class="inferred-note">💡【追記アドバイス】会社の規定ではLCC利用不可とのことですが、本研修旅行では利用します。</span></li>
             <li><strong>機内での飲み物</strong>は有料なため、必要な分は買っておくこと。</li>
         </ul>
     </div>
 
+    <h2>旅程概要</h2>
+    <table class="overview-table">
+        <tr>
+            <th>日付</th>
+            <th>曜日</th>
+            <th>主な行程</th>
+        </tr>
+        <tr>
+            <td>10月17日</td>
+            <td>(金)</td>
+            <td>京都駅集合、関西空港からブリスベンへ出発 (機内泊)</td>
+        </tr>
+        <tr>
+            <td>10月18日</td>
+            <td>(土)</td>
+            <td>ブリスベン到着、市内観光、ホストファミリーと対面・ホームステイ開始</td>
+        </tr>
+        <tr>
+            <td>10月19日</td>
+            <td>(日)</td>
+            <td>終日ホストファミリーと過ごす (ホームステイ)</td>
+        </tr>
+        <tr>
+            <td>10月20日</td>
+            <td>(月)</td>
+            <td>現地校にて英語レッスン、バディとの交流プログラム</td>
+        </tr>
+        <tr>
+            <td>10月21日</td>
+            <td>(火)</td>
+            <td>現地校にて日本文化紹介、交流、フェアウェルセレモニー</td>
+        </tr>
+        <tr>
+            <td>10月22日</td>
+            <td>(水)</td>
+            <td>ブリスベン出発、関西空港経由で京都へ帰着</td>
+        </tr>
+    </table>
+</div>
+
+<div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>✈️ 1日目: 10月17日(金) - 関西空港へ、ブリスベンへ (機内泊)</h2>
     <table>
         <tr>
@@ -182,6 +267,10 @@
 </div>
 
 <div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>🐨 2日目: 10月18日(土) - ブリスベン到着、市内観光、ホストファミリーと対面</h2>
     <table>
         <tr>
@@ -238,15 +327,19 @@
         <li><strong>酔い止め薬</strong> (バス移動前)</li>
         <li><strong>移動しやすい服装</strong> (私服、17日と同じ服)</li>
         <li><strong>ホストファミリーへのお土産</strong>（あれば）
-            <span class="inferred-note">💡【追記アドバイス】ホームステイ初日です。感謝の気持ちを伝える小さなプレゼントがあると喜ばれるでしょう。</span>
+            <span class="inferred-note">💡【追記アドバイス】感謝の気持ちを伝える小さなプレゼントがあると喜ばれるでしょう。</span>
         </li>
         <li><strong>自己紹介で使える簡単な英語フレーズ</strong>
-            <span class="inferred-note">💡【追記アドバイス】A2レベルとのことなので、趣味や好きなことなど、簡単な自己紹介を準備しておくと会話が弾みます。</span>
+            <span class="inferred-note">💡【追記アドバイス】趣味や好きなことなど、簡単な自己紹介を準備しておくと会話が弾みます。</span>
         </li>
     </ul>
 </div>
 
 <div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>🏡 3日目: 10月19日(日) - ホームステイ (終日)</h2>
     <table>
         <tr>
@@ -275,11 +368,15 @@
         <li><strong>日本の文化紹介グッズ</strong>（折り紙など、あれば）
             <span class="inferred-note">💡【追記アドバイス】簡単な日本文化を紹介できるものがあると、コミュニケーションのきっかけになります。</span>
         </li>
-        <li><strong>私服</strong> (終日)</li>
+        <li><strong>私服</strong></li>
     </ul>
 </div>
 
 <div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>🏫 4日目: 10月20日(月) - 現地校交流 (Pimpama/Pacific Pines)</h2>
     <table>
         <tr>
@@ -313,7 +410,7 @@
     </table>
     <h3>✅ 4日目に必要なもの（特に重要なもの）</h3>
     <ul>
-        <li><strong>制服</strong> (終日)</li>
+        <li><strong>制服</strong></li>
         <li><strong>貴重品</strong>（パスポート・スマホ・カメラ等）は<strong>スーツケースに入れて鍵をかけておく</strong>。</li>
         <li><strong>バディとの交流のための話題</strong>
             <span class="inferred-note">💡【追記アドバイス】日本の学校生活やアニメ、好きな音楽など、写真やスマホアプリを見せながら話せる準備をしておくと良いでしょう。</span>
@@ -323,6 +420,10 @@
 </div>
 
 <div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>👋 5日目: 10月21日(火) - 現地校交流、フェアウェルセレモニー</h2>
     <table>
         <tr>
@@ -366,6 +467,10 @@
 </div>
 
 <div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>🛬 6日目: 10月22日(水) - ブリスベン発、帰国</h2>
     <table>
         <tr>
@@ -419,8 +524,8 @@
     <ul>
         <li><strong>パスポート</strong>・<strong>搭乗券</strong> (最後まで携帯)</li>
         <li><strong>携行品・別送品申告書</strong> (機内で記入を済ませておく)</li>
-        <li><strong>帰国時の<a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong> (日本)
-            <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加しました。事前に登録を済ませ、QRコードをスクリーンショットで保存しておくとスムーズです。</span>
+        <li><strong>帰国時の<a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong>
+            <span class="inferred-note">💡【追記アドバイス】事前に登録を済ませ、QRコードをスクリーンショットで保存しておくとスムーズです。</span>
         </li>
         <li><strong>酔い止め薬</strong> (搭乗前に飲んでおく)</li>
         <li><strong>私服</strong></li>
@@ -428,7 +533,11 @@
 </div>
 
 <div class="page">
-    <h1>📝 研修旅行で役立つ英会話50選 & 決済方法</h1>
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
+    <h1 id="tips">📝 研修旅行で役立つ英会話50選 & 決済方法</h1>
     <p>ホストファミリーやバディとの交流に役立つ、簡単な日常会話フレーズ集です。</p>
 
     <div class="finance-box">
@@ -509,42 +618,46 @@
 </div>
 
 <div class="page">
+    <nav class="page-nav">
+        <a href="#itinerary">旅程セクションへ▼</a>
+        <a href="#tips">準備セクションへ▼</a>
+    </nav>
     <h2>✅ 最終出発前チェックリスト</h2>
     <p>最終確認を行い、忘れ物のないよう準備しましょう。</p>
 
     <h3>📚 書類・身の回り品</h3>
     <div style="column-count: 2; column-gap: 30px;">
         <div class="checklist-item"><input type="checkbox"> <strong>パスポート</strong></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>搭乗券</strong> (チェックイン後に受け取る)</div>
-        <div class="checklist-item"><input type="checkbox"> <strong><a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>携行品・別送品申告書</strong> (機内で記入)</div>
+        <div class="checklist-item"><input type="checkbox"> <strong>搭乗券</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong><a href="https://www.digital.go.jp/policies/visit_japan_web" target="_blank" rel="noopener noreferrer">Visit Japan Web</a> QRコード</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>携行品・別送品申告書</strong></div>
         <div class="checklist-item"><input type="checkbox"> 研修旅行のしおり</div>
         <div class="checklist-item"><input type="checkbox"> <strong>財布（現金・カード入れ）</strong></div>
         <div class="checklist-item"><input type="checkbox"> <strong>現地通貨</strong> (オーストラリアドル)</div>
-        <div class="checklist-item"><input type="checkbox"> <strong><a href="https://www.revolut.com/ja-JP/" target="_blank" rel="noopener noreferrer">Revolut</a>ジュニアカード</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong><a href="https://www.revolut.com/ja-JP/" target="_blank" rel="noopener noreferrer">Revolut</a>ジュニアカード</strong></div>
         <div class="checklist-item"><input type="checkbox"> <strong>海外旅行保険証</strong></div>
         <div class="checklist-item"><input type="checkbox"> 常備薬（酔い止め薬など）</div>
         <div class="checklist-item"><input type="checkbox"> スマホ/カメラ (手荷物へ)</div>
-        <div class="checklist-item"><input type="checkbox"> 充電器/変換プラグ (<a href="https://wise.com/gb/plug-types/australia" target="_blank" rel="noopener noreferrer">Oタイプ</a>) <span class="inferred-note">💡【追記アドバイス】オーストラリアのプラグ形状です。</span></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>スマホ用3-in-1ケーブル</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>USB-C to Cケーブル</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>Type-Aポート付タップケーブル</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。</span></div>
+        <div class="checklist-item"><input type="checkbox"> 充電器/変換プラグ (<a href="https://www.power-plugs-sockets.com/australia/" target="_blank" rel="noopener noreferrer">Oタイプ</a>) <span class="inferred-note">💡【追記アドバイス】オーストラリアの電源プラグはOタイプです。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>スマホ用3-in-1ケーブル</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>USB-C to Cケーブル</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>Type-Aポート付タップケーブル</strong></div>
         <div class="checklist-item"><input type="checkbox"> <strong>英会話学習用メモ/単語帳</strong></div>
         <div class="checklist-item"><input type="checkbox"> <strong>筆記用具</strong> (機内で書類記入に必須)</div>
     </div>
 
     <h3>👗 衣類・身だしなみ</h3>
     <div style="column-count: 2; column-gap: 30px;">
-        <div class="checklist-item"><input type="checkbox"> <strong>制服</strong> (4日目、5日目に必要)</div>
-        <div class="checklist-item"><input type="checkbox"> <strong>体操服</strong> (5日目、または現地校交流用)</div>
+        <div class="checklist-item"><input type="checkbox"> <strong>制服</strong></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>体操服</strong></div>
         <div class="checklist-item"><input type="checkbox"> 私服（5日分）</div>
         <div class="checklist-item"><input type="checkbox"> 下着・靴下 (日数分)</div>
-        <div class="checklist-item"><input type="checkbox"> パジャマ (ホストファミリー宅用)</div>
+        <div class="checklist-item"><input type="checkbox"> パジャマ</div>
         <div class="checklist-item"><input type="checkbox"> 羽織るもの (寒暖差対策) <span class="inferred-note">💡【追記アドバイス】オーストラリアの10月は春ですが、朝晩は冷えることがあります。</span></div>
         <div class="checklist-item"><input type="checkbox"> タオル・洗面用具</div>
-        <div class="checklist-item"><input type="checkbox"> 液体物 (100ml以下に小分け/透明袋に収納)</div>
+        <div class="checklist-item"><input type="checkbox"> 液体物 (100ml以下/透明袋に収納)</div>
         <div class="checklist-item"><input type="checkbox"> 日焼け止め/帽子 <span class="inferred-note">💡【追記アドバイス】オーストラリアは紫外線が強いので対策は必須です。</span></div>
-        <div class="checklist-item"><input type="checkbox"> <strong>ヘアアイロン</strong> <span class="inferred-note">💡【追記アドバイス】お客様の指示により追加。電源コード式は可、バッテリー式はリチウム電池の取り扱いに注意。</span></div>
+        <div class="checklist-item"><input type="checkbox"> <strong>ヘアアイロン</strong> <span class="inferred-note">💡【追記アドバイス】電源コード式は可、バッテリー式はリチウム電池の取り扱いに注意。</span></div>
     </div>
 
     <h3>✈️ 機内での快適グッズ（手荷物へ）</h3>
